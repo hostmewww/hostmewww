@@ -1,0 +1,5 @@
+<div class="row{% if align.x %} {{align.xs}}-xs{% endif %}{% if align.md %} {{align.md}}-md{% endif %}{% if justify.xs %} {{justify.xs}}-xs{% endif %}{% if justify.md %} {{justify.md}}-md{% endif %}">
+{% for column in columns %}
+{% include "column" with column %}
+{% endfor %}
+</div>

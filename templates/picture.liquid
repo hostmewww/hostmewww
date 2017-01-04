@@ -1,0 +1,14 @@
+{% comment %} 
+<paper-picture src="{{config.src}}" layout="{{config.layout}}" caption="{{config.caption}}"></paper-picture>
+
+<paper-picture>
+    <div class="picture {{config.layout}}">
+        <img class="content" src="{{config.src}}">
+        <label class="picture-caption">{{config.caption}}</label>
+    </div>
+</paper-picture>
+{% endcomment %}
+
+<div class="picture">
+    <img src="{{sourceUrl}}" alt="{{caption}}" class="content">
+</div>

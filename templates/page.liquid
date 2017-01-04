@@ -1,0 +1,3 @@
+    {% for node in pageContentModel %}
+    {% include {{node.type}} with node %}
+    {% endfor %}

@@ -1,0 +1,17 @@
+<ul class="dropdown-menu">
+{% for navigationItem in navigationItems %}
+    {% if navigationItem.navigationItems  %}
+        <li class="dropdown dropdown-submenu">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+                {{navigationItem.label}}
+            </a>
+            {% include 'navbar-menu' with navigationItem %}
+        </li>
+    {% endif %}
+    {% unless navigationItem.navigationItems  %}
+            <a class="dropdown-toggle" data-toggle="dropdown" href="{{navigationItem.externalUrl}}">
+                {{navigationItem.label}}
+            </a>
+    {% endunless %}
+{% endfor %}
+</ul>

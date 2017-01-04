@@ -1,0 +1,20 @@
+{% for range in ranges %}
+    {% for mark in range.marks %}
+        {% case mark.type %}
+            {% when "bold" %}
+            <b>
+            {% when "italic" %}
+            <i>
+        {% endcase %}
+    {% endfor %}
+    {{range.text | escape }}
+    {% for mark in range.marks %}
+        {% case mark.type %}
+            {% when "bold" %}
+            </b>
+            {% when "italic" %}
+            </i>
+        {% endcase %}
+    {% endfor %}
+{% endfor %}
+{{text}}

@@ -86,7 +86,7 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-9 middle-sm end-sm middle-md end-md middle-lg end-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
@@ -109,14 +109,14 @@
         <!--ko if: nodes().length > 0 --><!--/ko-->
         <!--ko ifnot: nodes().length > 0 -->
         <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/blog">Blog</a>
+            <a data-bind="text: label, attr: { href: url }" href="/about">About</a>
         </li>
         <!--/ko-->
     
         <!--ko if: nodes().length > 0 --><!--/ko-->
         <!--ko ifnot: nodes().length > 0 -->
         <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/about">About</a>
+            <a data-bind="text: label, attr: { href: url }" href="/blog">Blog</a>
         </li>
         <!--/ko-->
     
@@ -162,12 +162,13 @@
     </ul>
 </script><!-- /ko -->
     
-    <!-- ko widgetH: widget --><a href="#" class="btn btn-primary" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank">Try now</a><!-- /ko -->
+    <!-- ko widgetH: widget --><a href="https://www.hostmeapp.com/sign-up/" class="btn btn-primary" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank" title="External link">Try now</a><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -197,11 +198,11 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="1750" class="text-left"><span data-key="1749"><span data-offset-key="1749-0">New Reservation Widget</span></span></h3><p data-key="1752" class="text-left"><span data-key="1751"><span data-offset-key="1751-0">October 27, 2016</span></span></p><p data-key="1754" class="text-left"><span data-key="1753"><span data-offset-key="1753-0">In this release we are introducing a brand new reservation widget that you can place on your website. Not only does it come with a new style ...</span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="2197" class="text-left"><span data-key="2196"><span data-offset-key="2196-0">New Reservation Widget</span></span></h3><p data-key="2199" class="text-left"><span data-key="2198"><span data-offset-key="2198-0">October 27, 2016</span></span></p><p data-key="2201" class="text-left"><span data-key="2200"><span data-offset-key="2200-0">In this release we are introducing a brand new reservation widget that you can place on your website. Not only does it come with a new style ...</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
@@ -209,8 +210,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -238,11 +240,11 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="1775" class="text-left"><span data-key="1774"><span data-offset-key="1774-0">Reservation Page for Restaurant</span></span></h3><p data-key="1777" class="text-left"><span data-key="1776"><span data-offset-key="1776-0">October 27, 2016</span></span></p><p data-key="1779" class="text-left"><span data-key="1778"><span data-offset-key="1778-0">Now every restaurant in our system has a page with information about the restaurant and an online reservation form. Restaurants can add a link to this page to their website or ...</span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="2222" class="text-left"><span data-key="2221"><span data-offset-key="2221-0">Reservation Page for Restaurant</span></span></h3><p data-key="2224" class="text-left"><span data-key="2223"><span data-offset-key="2223-0">October 27, 2016</span></span></p><p data-key="2226" class="text-left"><span data-key="2225"><span data-offset-key="2225-0">Now every restaurant in our system has a page with information about the restaurant and an online reservation form. Restaurants can add a link to this page to their website or ...</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
@@ -250,8 +252,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -267,14 +270,15 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-sm-4 col-md-4 col-lg-4 middle-sm center-sm middle-md center-md middle-lg center-lg">
     <!-- ko if: widgets().length > 0 --><!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 -->
+    <!-- ko if: widgets().length === 0 -->
     <div class="empty-column">
+        <p></p>
     </div>
     <!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="1800" class="text-left"><span data-key="1799"><span data-offset-key="1799-0">Reservation and Waitlist Dashboard Improvements</span></span></h3><p data-key="1802" class="text-left"><span data-key="1801"><span data-offset-key="1801-0">October 27, 2016</span></span></p><p data-key="1804" class="text-left"><span data-key="1803"><span data-offset-key="1803-0">These improvements include a message center, reservation search, reservation list view and more.</span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="2247" class="text-left"><span data-key="2246"><span data-offset-key="2246-0">Reservation and Waitlist Dashboard Improvements</span></span></h3><p data-key="2249" class="text-left"><span data-key="2248"><span data-offset-key="2248-0">October 27, 2016</span></span></p><p data-key="2251" class="text-left"><span data-key="2250"><span data-offset-key="2250-0">These improvements include a message center, reservation search, reservation list view and more.</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
@@ -282,8 +286,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -299,14 +304,15 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-sm-4 col-md-4 col-lg-4 middle-sm center-sm middle-md center-md middle-lg center-lg">
     <!-- ko if: widgets().length > 0 --><!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 -->
+    <!-- ko if: widgets().length === 0 -->
     <div class="empty-column">
+        <p></p>
     </div>
     <!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="1825" class="text-left"><span data-key="1824"><span data-offset-key="1824-0">Zone and Server Management</span></span></h3><p data-key="1827" class="text-left"><span data-key="1826"><span data-offset-key="1826-0">Augist 1, 2016</span></span></p><p data-key="1829" class="text-left"><span data-key="1828"><span data-offset-key="1828-0">Now you can assign servers to tables and track their performance and load in real time...</span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="2272" class="text-left"><span data-key="2271"><span data-offset-key="2271-0">Zone and Server Management</span></span></h3><p data-key="2274" class="text-left"><span data-key="2273"><span data-offset-key="2273-0">Augist 1, 2016</span></span></p><p data-key="2276" class="text-left"><span data-key="2275"><span data-offset-key="2275-0">Now you can assign servers to tables and track their performance and load in real time...</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
@@ -314,8 +320,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -331,14 +338,15 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-sm-4 col-md-4 col-lg-4 middle-sm center-sm middle-md center-md middle-lg center-lg">
     <!-- ko if: widgets().length > 0 --><!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 -->
+    <!-- ko if: widgets().length === 0 -->
     <div class="empty-column">
+        <p></p>
     </div>
     <!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="1850" class="text-left"><span data-key="1849"><span data-offset-key="1849-0">New Table Statuses</span></span></h3><p data-key="1852" class="text-left"><span data-key="1851"><span data-offset-key="1851-0">June 7, 2016</span></span></p><p data-key="1854" class="text-left"><span data-key="1853"><span data-offset-key="1853-0">Enable table statuses and associate them with an estimated meal's completion percentage to provide the host with a more accurate table release time...</span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="2297" class="text-left"><span data-key="2296"><span data-offset-key="2296-0">New Table Statuses</span></span></h3><p data-key="2299" class="text-left"><span data-key="2298"><span data-offset-key="2298-0">June 7, 2016</span></span></p><p data-key="2301" class="text-left"><span data-key="2300"><span data-offset-key="2300-0">Enable table statuses and associate them with an estimated meal's completion percentage to provide the host with a more accurate table release time...</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
@@ -346,8 +354,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -363,14 +372,15 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-sm-4 col-md-4 col-lg-4 middle-sm center-sm middle-md center-md middle-lg center-lg">
     <!-- ko if: widgets().length > 0 --><!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 -->
+    <!-- ko if: widgets().length === 0 -->
     <div class="empty-column">
+        <p></p>
     </div>
     <!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="1875" class="text-left"><span data-key="1874"><span data-offset-key="1874-0">Improved Guest Book</span></span></h3><p data-key="1877" class="text-left"><span data-key="1876"><span data-offset-key="1876-0">May 30, 2016</span></span></p><p data-key="1879" class="text-left"><span data-key="1878"><span data-offset-key="1878-0">Now we track your guests starting from the moment they make a reservation or put their names on your wait list. You can see and edit their profiles, make notes and look at their visiting history...</span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="2322" class="text-left"><span data-key="2321"><span data-offset-key="2321-0">Improved Guest Book</span></span></h3><p data-key="2324" class="text-left"><span data-key="2323"><span data-offset-key="2323-0">May 30, 2016</span></span></p><p data-key="2326" class="text-left"><span data-key="2325"><span data-offset-key="2325-0">Now we track your guests starting from the moment they make a reservation or put their names on your wait list. You can see and edit their profiles, make notes and look at their visiting history...</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
@@ -378,8 +388,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -395,14 +406,15 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-sm-4 col-md-4 col-lg-4 middle-sm center-sm middle-md center-md middle-lg center-lg">
     <!-- ko if: widgets().length > 0 --><!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 -->
+    <!-- ko if: widgets().length === 0 -->
     <div class="empty-column">
+        <p></p>
     </div>
     <!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="1900" class="text-left"><span data-key="1899"><span data-offset-key="1899-0">Dashboards &amp; Wizard</span></span></h3><p data-key="1902" class="text-left"><span data-key="1901"><span data-offset-key="1901-0">May 9, 2016</span></span></p><p data-key="1904" class="text-left"><span data-key="1903"><span data-offset-key="1903-0">We are pleased to tell you that we have shipped a major user interface update to our wait list and reservation modules. We are working on usability improvements to the app and this is...</span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="2347" class="text-left"><span data-key="2346"><span data-offset-key="2346-0">Dashboards &amp; Wizard</span></span></h3><p data-key="2349" class="text-left"><span data-key="2348"><span data-offset-key="2348-0">May 9, 2016</span></span></p><p data-key="2351" class="text-left"><span data-key="2350"><span data-offset-key="2350-0">We are pleased to tell you that we have shipped a major user interface update to our wait list and reservation modules. We are working on usability improvements to the app and this is...</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
@@ -410,8 +422,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -420,6 +433,7 @@
     </div>
 </section><!-- /ko -->
     <!-- /ko -->
+    <!-- ko if: sections().length === 0 --><!-- /ko -->
 </div></div>
 
 <div data-bind="widgetH: widget"><section style="background-color: #eeb087;" class="with-padding">
@@ -429,22 +443,23 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h2 data-key="1592" class="text-center"><span data-key="1591"><span data-offset-key="1591-0"><span style="color: #ffffff;">Get it now!</span></span></span></h2><p data-key="1594" class="text-center"><span data-key="1593"><span data-offset-key="1593-0"><span style="color: #ffffff;">No setup fees. No cover fees. No contract.</span></span></span></p><p data-key="1596" class="text-center"><span data-key="1595"><span data-offset-key="1595-0"><span style="color: #ffffff;">What are you waiting for?</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h2 data-key="2039" class="text-center"><span data-key="2038"><span data-offset-key="2038-0"><span style="color: #ffffff;">Get it now!</span></span></span></h2><p data-key="2041" class="text-center"><span data-key="2040"><span data-offset-key="2040-0"><span style="color: #ffffff;">No setup fees. No cover fees. No contract.</span></span></span></p><p data-key="2043" class="text-center"><span data-key="2042"><span data-offset-key="2042-0"><span style="color: #ffffff;">What are you waiting for?</span></span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
-    <!-- ko widgetH: widget --><a href="#" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank">App Store</a><!-- /ko -->
+    <!-- ko widgetH: widget --><a href="https://itunes.apple.com/app/apple-store/id1021031770?aid=com.hostmeapp.hostmepanel&amp;cs=website-footer&amp;cm=website&amp;cn=website&amp;pt=869522&amp;ct=postcard-nearby-custmers&amp;mt=8" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank" title="External link">App Store</a><!-- /ko -->
     
-    <!-- ko widgetH: widget --><a href="#" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank">Google Play</a><!-- /ko -->
+    <!-- ko widgetH: widget --><a href="https://play.google.com/store/apps/details?id=com.hostmeapp.hostmepanel&amp;utm_source=website-promo&amp;utm_medium=website&amp;utm_campaign=website" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank" title="External link">Google Play</a><!-- /ko -->
     
-    <!-- ko widgetH: widget --><a href="#" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank">Windows Store</a><!-- /ko -->
+    <!-- ko widgetH: widget --><a href="https://www.microsoft.com/store/apps/9nblggh1k8v9?utm_source=website-promo&amp;utm_medium=website&amp;utm_campaign=website" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank" title="External link">Windows Store</a><!-- /ko -->
     
-    <!-- ko widgetH: widget --><a href="#" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank">PC / Mac</a><!-- /ko -->
+    <!-- ko widgetH: widget --><a href="https://www.hostmeapp.com/sign-up/" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank" title="External link">PC / Mac</a><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -460,44 +475,45 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1617" class="text-left"><span data-key="1616"><span data-offset-key="1616-0"><span style="color: #ffffff;">Quick links</span></span></span></p><p data-key="1619" class="text-left"><span data-key="1618"><span data-offset-key="1618-0"><span style="color: #f8f8f8;">Home</span></span></span></p><p data-key="1621" class="text-left"><span data-key="1620"><span data-offset-key="1620-0"><span style="color: #f8f8f8;">Reservations</span></span></span></p><p data-key="1623" class="text-left"><span data-key="1622"><span data-offset-key="1622-0"><span style="color: #f8f8f8;">Loyalty</span></span></span></p><p data-key="1625" class="text-left"><span data-key="1624"><span data-offset-key="1624-0"><span style="color: #f8f8f8;">About</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="2064" class="text-left"><span data-key="2063"><span data-offset-key="2063-0"><span style="color: #ffffff;">Quick links</span></span></span></p><p data-key="2066" class="text-left"><span data-key="2065"><span data-offset-key="2065-0"><span style="color: #f8f8f8;">Home</span></span></span></p><p data-key="2068" class="text-left"><span data-key="2067"><span data-offset-key="2067-0"><span style="color: #f8f8f8;">Reservations</span></span></span></p><p data-key="2070" class="text-left"><span data-key="2069"><span data-offset-key="2069-0"><span style="color: #f8f8f8;">Loyalty</span></span></span></p><p data-key="2072" class="text-left"><span data-key="2071"><span data-offset-key="2071-0"><span style="color: #f8f8f8;">About</span></span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1646" class="text-left"><span data-key="1645"><span data-offset-key="1645-0"><span style="color: #ffffff;">Mobile apps</span></span></span></p><p data-key="1648" class="text-left"><span data-key="1647"><span data-offset-key="1647-0"><span style="color: #f8f8f8;">App store</span></span></span></p><p data-key="1650" class="text-left"><span data-key="1649"><span data-offset-key="1649-0"><span style="color: #f8f8f8;">Google play</span></span></span></p><p data-key="1652" class="text-left"><span data-key="1651"><span data-offset-key="1651-0"><span style="color: #f8f8f8;">Windows Store</span></span></span></p><p data-key="1654" class="text-left"><span data-key="1653"><span data-offset-key="1653-0"><span style="color: #f8f8f8;">HTML Application</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="2093" class="text-left"><span data-key="2092"><span data-offset-key="2092-0"><span style="color: #ffffff;">Mobile apps</span></span></span></p><p data-key="2095" class="text-left"><span data-key="2094"><span data-offset-key="2094-0"><span style="color: #f8f8f8;">App store</span></span></span></p><p data-key="2097" class="text-left"><span data-key="2096"><span data-offset-key="2096-0"><span style="color: #f8f8f8;">Google play</span></span></span></p><p data-key="2099" class="text-left"><span data-key="2098"><span data-offset-key="2098-0"><span style="color: #f8f8f8;">Windows Store</span></span></span></p><p data-key="2101" class="text-left"><span data-key="2100"><span data-offset-key="2100-0"><span style="color: #f8f8f8;">HTML Application</span></span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1675" class="text-left"><span data-key="1674"><span data-offset-key="1674-0"><span style="color: #ffffff;">Legal</span></span></span></p><p data-key="1677" class="text-left"><span data-key="1676"><span data-offset-key="1676-0"><span style="color: #f8f8f8;">Pricing</span></span></span></p><p data-key="1679" class="text-left"><span data-key="1678"><span data-offset-key="1678-0"><span style="color: #f8f8f8;">Privacy</span></span></span></p><p data-key="1681" class="text-left"><span data-key="1680"><span data-offset-key="1680-0"><span style="color: #f8f8f8;">Terms of use</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="2122" class="text-left"><span data-key="2121"><span data-offset-key="2121-0"><span style="color: #ffffff;">Legal</span></span></span></p><p data-key="2124" class="text-left"><span data-key="2123"><span data-offset-key="2123-0"><span style="color: #f8f8f8;">Pricing</span></span></span></p><p data-key="2126" class="text-left"><span data-key="2125"><span data-offset-key="2125-0"><span style="color: #f8f8f8;">Privacy</span></span></span></p><p data-key="2128" class="text-left"><span data-key="2127"><span data-offset-key="2127-0"><span style="color: #f8f8f8;">Terms of use</span></span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1702" class="text-left"><span data-key="1701"><span data-offset-key="1701-0"><span style="color: #ffffff;">Social</span></span></span></p><p data-key="1704" class="text-left"><span data-key="1703"><span data-offset-key="1703-0"><span style="color: #f8f8f8;">Facebook</span></span></span></p><p data-key="1706" class="text-left"><span data-key="1705"><span data-offset-key="1705-0"><span style="color: #f8f8f8;">Twitter</span></span></span></p><p data-key="1708" class="text-left"><span data-key="1707"><span data-offset-key="1707-0"><span style="color: #f8f8f8;">LinkedIn</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="2149" class="text-left"><span data-key="2148"><span data-offset-key="2148-0"><span style="color: #ffffff;">Social</span></span></span></p><p data-key="2151" class="text-left"><span data-key="2150"><span data-offset-key="2150-0"><span style="color: #f8f8f8;">Facebook</span></span></span></p><p data-key="2153" class="text-left"><span data-key="2152"><span data-offset-key="2152-0"><span style="color: #f8f8f8;">Twitter</span></span></span></p><p data-key="2155" class="text-left"><span data-key="2154"><span data-offset-key="2154-0"><span style="color: #f8f8f8;">LinkedIn</span></span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -506,14 +522,15 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1729" class="text-center"><span data-key="1728"><span data-offset-key="1728-0"><span style="color: #eef1f2;">© 2017 Hostme LLC. All Rights Reserved.</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="2176" class="text-center"><span data-key="2175"><span data-offset-key="2175-0"><span style="color: #eef1f2;">© 2017 Hostme LLC. All Rights Reserved.</span></span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -524,7 +541,7 @@
 <!-- /ko -->
 <!-- /ko -->
 
-<!-- ko ifnot: widgets().length > 0 --><!-- /ko --></div>
+<!-- ko if: widgets().length === 0 --><!-- /ko --></div>
 <!--/ko-->
 
 <!--ko if: working()--><!--/ko--></paper-doc>
@@ -536,7 +553,7 @@
 <div data-bind="html: gtmBootstrapper"></div>
 <!-- End Google Tag Manager --></paper-gtm>
     <paper-intercom><!-- Google Tag Manager -->
-<div data-bind="html: intercomBootstrapper"></div>
+<div data-bind="html: intercomBootstrapper"><script>window.intercomSettings = { app_id: 'b0tpxtt6' };</script><script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==='function'){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/b0tpxtt6';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script></div>
 <!-- End Google Tag Manager --></paper-intercom>
 
 

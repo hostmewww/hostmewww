@@ -109,14 +109,14 @@
         <!--ko if: nodes().length > 0 --><!--/ko-->
         <!--ko ifnot: nodes().length > 0 -->
         <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/blog">Blog</a>
+            <a data-bind="text: label, attr: { href: url }" href="/about">About</a>
         </li>
         <!--/ko-->
     
         <!--ko if: nodes().length > 0 --><!--/ko-->
         <!--ko ifnot: nodes().length > 0 -->
         <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/about">About</a>
+            <a data-bind="text: label, attr: { href: url }" href="/blog">Blog</a>
         </li>
         <!--/ko-->
     
@@ -162,7 +162,7 @@
     </ul>
 </script><!-- /ko -->
     
-    <!-- ko widgetH: widget --><a href="#" class="btn btn-primary" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank">Try now</a><!-- /ko -->
+    <!-- ko widgetH: widget --><a href="https://www.hostmeapp.com/sign-up/" class="btn btn-primary" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank" title="External link">Try now</a><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
@@ -217,13 +217,13 @@
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
-    <!-- ko widgetH: widget --><a href="#" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank">App Store</a><!-- /ko -->
+    <!-- ko widgetH: widget --><a href="https://itunes.apple.com/app/apple-store/id1021031770?aid=com.hostmeapp.hostmepanel&amp;cs=website-footer&amp;cm=website&amp;cn=website&amp;pt=869522&amp;ct=postcard-nearby-custmers&amp;mt=8" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank" title="External link">App Store</a><!-- /ko -->
     
-    <!-- ko widgetH: widget --><a href="#" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank">Google Play</a><!-- /ko -->
+    <!-- ko widgetH: widget --><a href="https://play.google.com/store/apps/details?id=com.hostmeapp.hostmepanel&amp;utm_source=website-promo&amp;utm_medium=website&amp;utm_campaign=website" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank" title="External link">Google Play</a><!-- /ko -->
     
-    <!-- ko widgetH: widget --><a href="#" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank">Windows Store</a><!-- /ko -->
+    <!-- ko widgetH: widget --><a href="https://www.microsoft.com/store/apps/9nblggh1k8v9?utm_source=website-promo&amp;utm_medium=website&amp;utm_campaign=website" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank" title="External link">Windows Store</a><!-- /ko -->
     
-    <!-- ko widgetH: widget --><a href="#" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank">PC / Mac</a><!-- /ko -->
+    <!-- ko widgetH: widget --><a href="https://www.hostmeapp.com/sign-up/" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank" title="External link">PC / Mac</a><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
@@ -323,7 +323,7 @@
 <div data-bind="html: gtmBootstrapper"></div>
 <!-- End Google Tag Manager --></paper-gtm>
     <paper-intercom><!-- Google Tag Manager -->
-<div data-bind="html: intercomBootstrapper"></div>
+<div data-bind="html: intercomBootstrapper"><script>window.intercomSettings = { app_id: 'b0tpxtt6' };</script><script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==='function'){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/b0tpxtt6';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script></div>
 <!-- End Google Tag Manager --></paper-intercom>
 
 

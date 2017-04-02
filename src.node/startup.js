@@ -53,7 +53,9 @@ var components_node_1 = require("./components.node");
 var publishing_registrations_1 = require("./../src/app/publishing/publishing.registrations");
 var inversifyInjector_1 = require("./../src/app/injection/inversifyInjector");
 var registrations_firebase_1 = require("./../src/app/firebase/registrations.firebase");
+var registrations_github_1 = require("./../src/app/github/registrations.github");
 var ISettingsProvider_1 = require("./../src/app/configuration/ISettingsProvider");
+var staticSettingsProvider_1 = require("./staticSettingsProvider");
 function publish() {
     return __awaiter(this, void 0, void 0, function () {
         var _this = this;
@@ -101,6 +103,8 @@ function publish() {
                                     use(new knockout_loaders_1.KnockoutRegistrationLoaders());
                                     use(new knockout_widgets_1.KnockoutRegistrationWidgets());
                                     use(new registrations_firebase_1.FirebaseRegistration());
+                                    injector.bindSingleton("settingsProvider", staticSettingsProvider_1.StaticSettingsProvider);
+                                    use(new registrations_github_1.GithubRegistration());
                                     use(new components_node_1.ComponentRegistrationNode());
                                     use(new publishing_registrations_1.PublishingRegistration());
                                     injector.resolve("widgetBindingHandler");
@@ -108,7 +112,7 @@ function publish() {
                                 case 1:
                                     _a.sent();
                                     ko.applyBindings();
-                                    publisher = injector.resolve("sitePublisher");
+                                    publisher = injector.resolve("githubPublisher");
                                     _a.label = 2;
                                 case 2:
                                     _a.trys.push([2, 4, , 5]);
@@ -133,3 +137,4 @@ function publish() {
     });
 }
 exports.publish = publish;
+publish();

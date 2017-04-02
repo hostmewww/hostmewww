@@ -86,7 +86,7 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-9 middle-sm end-sm middle-md end-md middle-lg end-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
@@ -166,8 +166,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -197,7 +198,7 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
@@ -209,8 +210,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -238,7 +240,7 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
@@ -250,8 +252,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -267,8 +270,9 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-sm-4 col-md-4 col-lg-4 middle-sm center-sm middle-md center-md middle-lg center-lg">
     <!-- ko if: widgets().length > 0 --><!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 -->
+    <!-- ko if: widgets().length === 0 -->
     <div class="empty-column">
+        <p></p>
     </div>
     <!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
@@ -282,8 +286,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -299,8 +304,9 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-sm-4 col-md-4 col-lg-4 middle-sm center-sm middle-md center-md middle-lg center-lg">
     <!-- ko if: widgets().length > 0 --><!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 -->
+    <!-- ko if: widgets().length === 0 -->
     <div class="empty-column">
+        <p></p>
     </div>
     <!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
@@ -314,8 +320,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -331,8 +338,9 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-sm-4 col-md-4 col-lg-4 middle-sm center-sm middle-md center-md middle-lg center-lg">
     <!-- ko if: widgets().length > 0 --><!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 -->
+    <!-- ko if: widgets().length === 0 -->
     <div class="empty-column">
+        <p></p>
     </div>
     <!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
@@ -346,8 +354,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -363,8 +372,9 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-sm-4 col-md-4 col-lg-4 middle-sm center-sm middle-md center-md middle-lg center-lg">
     <!-- ko if: widgets().length > 0 --><!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 -->
+    <!-- ko if: widgets().length === 0 -->
     <div class="empty-column">
+        <p></p>
     </div>
     <!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
@@ -378,8 +388,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -395,8 +406,9 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-sm-4 col-md-4 col-lg-4 middle-sm center-sm middle-md center-md middle-lg center-lg">
     <!-- ko if: widgets().length > 0 --><!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 -->
+    <!-- ko if: widgets().length === 0 -->
     <div class="empty-column">
+        <p></p>
     </div>
     <!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
@@ -410,8 +422,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -420,6 +433,7 @@
     </div>
 </section><!-- /ko -->
     <!-- /ko -->
+    <!-- ko if: sections().length === 0 --><!-- /ko -->
 </div></div>
 
 <div data-bind="widgetH: widget"><section style="background-color: #eeb087;" class="with-padding">
@@ -443,8 +457,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -466,7 +481,7 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
@@ -476,7 +491,7 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
@@ -486,7 +501,7 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
@@ -496,8 +511,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -512,8 +528,9 @@
     <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+    <!-- ko if: widgets().length === 0 --><!-- /ko -->
 </div><!-- /ko --><!-- /ko -->
+    <!-- ko if: columns().length === 0 --><!-- /ko -->
 </div>
 
 <!-- /ko -->
@@ -524,7 +541,7 @@
 <!-- /ko -->
 <!-- /ko -->
 
-<!-- ko ifnot: widgets().length > 0 --><!-- /ko --></div>
+<!-- ko if: widgets().length === 0 --><!-- /ko --></div>
 <!--/ko-->
 
 <!--ko if: working()--><!--/ko--></paper-doc>

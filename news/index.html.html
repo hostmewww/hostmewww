@@ -108,7 +108,7 @@
     
         <!--ko if: nodes().length > 0 --><!--/ko-->
         <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive" class="active">
+        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
             <a data-bind="text: label, attr: { href: url }" href="/blog">Blog</a>
         </li>
         <!--/ko-->
@@ -122,7 +122,7 @@
     
         <!--ko if: nodes().length > 0 --><!--/ko-->
         <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
+        <li data-bind="css: {active: isActive()}, click: $parent.setActive" class="active">
             <a data-bind="text: label, attr: { href: url }" href="/news">News</a>
         </li>
         <!--/ko-->
@@ -185,14 +185,14 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-sm-4 col-md-4 col-lg-4 middle-sm center-sm middle-md center-md middle-lg center-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="picture circle" data-bind="css: css, widget: {}">
+    <!-- ko widgetH: widget --><div class="picture noframe" data-bind="css: css, widget: {}">
     <!-- ko if: layout() === "polaroid" --><!-- /ko -->
 
-    <!-- ko if: layout() === "circle" -->
-    <div class="content" data-bind="background: background" style="background-image: url(&quot;/content/5-technologies.jpg&quot;);"></div>
-    <!-- /ko -->
+    <!-- ko if: layout() === "circle" --><!-- /ko -->
 
-    <!-- ko if: layout() === "noframe" --><!-- /ko -->
+    <!-- ko if: layout() === "noframe" -->
+    <img class="content" data-bind="attr: { src: sourceUrl, alt: caption }" src="/content/news-new-reservation-widget.png" alt="Picture">
+    <!-- /ko -->
 </div><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
@@ -201,7 +201,7 @@
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="1376" class="text-left"><span data-key="1375"><span data-offset-key="1375-0">5 technologies you need to know before you open your first restaurant</span></span></h3><p data-key="1378" class="text-left"><span data-key="1377"><span data-offset-key="1377-0">A quick read to learn about the 5 key restaurant tools to help you be successful in this quite exciting yet very competitive business.</span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="1929" class="text-left"><span data-key="1928"><span data-offset-key="1928-0">New Reservation Widget</span></span></h3><p data-key="1931" class="text-left"><span data-key="1930"><span data-offset-key="1930-0">October 27, 2016</span></span></p><p data-key="1933" class="text-left"><span data-key="1932"><span data-offset-key="1932-0">In this release we are introducing a brand new reservation widget that you can place on your website. Not only does it come with a new style ...</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
@@ -226,14 +226,14 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-sm-4 col-md-4 col-lg-4 middle-sm center-sm middle-md center-md middle-lg center-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="picture circle" data-bind="css: css, widget: {}">
+    <!-- ko widgetH: widget --><div class="picture noframe" data-bind="css: css, widget: {}">
     <!-- ko if: layout() === "polaroid" --><!-- /ko -->
 
-    <!-- ko if: layout() === "circle" -->
-    <div class="content" data-bind="background: background" style="background-image: url(&quot;/content/valentine3.jpg&quot;);"></div>
-    <!-- /ko -->
+    <!-- ko if: layout() === "circle" --><!-- /ko -->
 
-    <!-- ko if: layout() === "noframe" --><!-- /ko -->
+    <!-- ko if: layout() === "noframe" -->
+    <img class="content" data-bind="attr: { src: sourceUrl, alt: caption }" src="/content/news-online-reservation-page.png" alt="Picture">
+    <!-- /ko -->
 </div><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
@@ -242,7 +242,7 @@
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="1399" class="text-left"><span data-key="1398"><span data-offset-key="1398-0">Valentine's Day is your chance to put your best foot forward, don't miss that chance</span></span></h3><p data-key="1401" class="text-left"><span data-key="1400"><span data-offset-key="1400-0">This worldwide celebration of love is around the corner and we are sharing some tips on how to wow your guests with small intentions.</span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="1954" class="text-left"><span data-key="1953"><span data-offset-key="1953-0">Reservation Page for Restaurant</span></span></h3><p data-key="1956" class="text-left"><span data-key="1955"><span data-offset-key="1955-0">October 27, 2016</span></span></p><p data-key="1958" class="text-left"><span data-key="1957"><span data-offset-key="1957-0">Now every restaurant in our system has a page with information about the restaurant and an online reservation form. Restaurants can add a link to this page to their website or ...</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
@@ -265,25 +265,16 @@
         <!-- ko foreach: { data: rows, as: 'row' } -->
         <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-sm-4 col-md-4 col-lg-4 middle-sm center-sm middle-md center-md middle-lg center-lg">
-    <!-- ko if: widgets().length > 0 -->
-    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="picture circle" data-bind="css: css, widget: {}">
-    <!-- ko if: layout() === "polaroid" --><!-- /ko -->
+    <!-- ko if: widgets().length > 0 --><!-- /ko -->
 
-    <!-- ko if: layout() === "circle" -->
-    <div class="content" data-bind="background: background" style="background-image: url(&quot;/content/leopold.jpg&quot;);"></div>
+    <!-- ko ifnot: widgets().length > 0 -->
+    <div class="empty-column">
+    </div>
     <!-- /ko -->
-
-    <!-- ko if: layout() === "noframe" --><!-- /ko -->
-</div><!-- /ko -->
-    <!-- /ko -->
-    <!-- /ko -->
-
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="1422" class="text-left"><span data-key="1421"><span data-offset-key="1421-0">Learn from Kafe Leopolds how to manage crowd in popular places</span></span></h3><p data-key="1424" class="text-left"><span data-key="1423"><span data-offset-key="1423-0">Washington, D.C. is home to hundreds of brunch, lunch, and dinner spots. While each establishment has crafted its own menu and created its signature dishes and drinks, they all have one thing in common: crowds...</span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="1979" class="text-left"><span data-key="1978"><span data-offset-key="1978-0">Reservation and Waitlist Dashboard Improvements</span></span></h3><p data-key="1981" class="text-left"><span data-key="1980"><span data-offset-key="1980-0">October 27, 2016</span></span></p><p data-key="1983" class="text-left"><span data-key="1982"><span data-offset-key="1982-0">These improvements include a message center, reservation search, reservation list view and more.</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
@@ -306,25 +297,16 @@
         <!-- ko foreach: { data: rows, as: 'row' } -->
         <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-sm-4 col-md-4 col-lg-4 middle-sm center-sm middle-md center-md middle-lg center-lg">
-    <!-- ko if: widgets().length > 0 -->
-    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="picture circle" data-bind="css: css, widget: {}">
-    <!-- ko if: layout() === "polaroid" --><!-- /ko -->
+    <!-- ko if: widgets().length > 0 --><!-- /ko -->
 
-    <!-- ko if: layout() === "circle" -->
-    <div class="content" data-bind="background: background" style="background-image: url(&quot;/content/wait.jpg&quot;);"></div>
+    <!-- ko ifnot: widgets().length > 0 -->
+    <div class="empty-column">
+    </div>
     <!-- /ko -->
-
-    <!-- ko if: layout() === "noframe" --><!-- /ko -->
-</div><!-- /ko -->
-    <!-- /ko -->
-    <!-- /ko -->
-
-    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="1445" class="text-left"><span data-key="1444"><span data-offset-key="1444-0">Don't wait at your favorite restaurant ever again!</span></span></h3><p data-key="1447" class="text-left"><span data-key="1446"><span data-offset-key="1446-0">We all have been in a situation where we are unable to make a reservation at our favorite restaurant because OpenTable reservation system shows that all tables are already booked...</span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="2004" class="text-left"><span data-key="2003"><span data-offset-key="2003-0">Zone and Server Management</span></span></h3><p data-key="2006" class="text-left"><span data-key="2005"><span data-offset-key="2005-0">Augist 1, 2016</span></span></p><p data-key="2008" class="text-left"><span data-key="2007"><span data-offset-key="2007-0">Now you can assign servers to tables and track their performance and load in real time...</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
@@ -347,25 +329,80 @@
         <!-- ko foreach: { data: rows, as: 'row' } -->
         <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-sm-4 col-md-4 col-lg-4 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko if: widgets().length > 0 --><!-- /ko -->
+
+    <!-- ko ifnot: widgets().length > 0 -->
+    <div class="empty-column">
+    </div>
+    <!-- /ko -->
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="picture circle" data-bind="css: css, widget: {}">
-    <!-- ko if: layout() === "polaroid" --><!-- /ko -->
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="2029" class="text-left"><span data-key="2028"><span data-offset-key="2028-0">New Table Statuses</span></span></h3><p data-key="2031" class="text-left"><span data-key="2030"><span data-offset-key="2030-0">June 7, 2016</span></span></p><p data-key="2033" class="text-left"><span data-key="2032"><span data-offset-key="2032-0">Enable table statuses and associate them with an estimated meal's completion percentage to provide the host with a more accurate table release time...</span></span></p></div></div></div></div>
 
-    <!-- ko if: layout() === "circle" -->
-    <div class="content" data-bind="background: background" style="background-image: url(&quot;/content/bb.jpg&quot;);"></div>
-    <!-- /ko -->
-
-    <!-- ko if: layout() === "noframe" --><!-- /ko -->
-</div><!-- /ko -->
+<!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
+    
+    <!-- ko widgetH: widget --><a href="#" class="btn btn-primary" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank">Read more</a><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
     <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- /ko -->
+</div>
+
+<!-- /ko -->
+        <!-- /ko -->
+        <!-- ko if: rows().length === 0 --><!-- /ko -->
+    </div>
+</section><!-- /ko -->
+    
+    <!-- ko widgetH: section --><section style="background-color: transparent;" class="with-padding">
+    <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
+        <!-- ko foreach: { data: rows, as: 'row' } -->
+        <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-sm-4 col-md-4 col-lg-4 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko if: widgets().length > 0 --><!-- /ko -->
+
+    <!-- ko ifnot: widgets().length > 0 -->
+    <div class="empty-column">
+    </div>
+    <!-- /ko -->
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="1468" class="text-left"><span data-key="1467"><span data-offset-key="1467-0">Understanding OpenTable's game plan and how to cut your bill without losing customers</span></span></h3><p data-key="1470" class="text-left"><span data-key="1469"><span data-offset-key="1469-0">As a restaurant owner, you may be getting tired of how much you pay OpenTable every single month and you have probably noticed that the bill is getting...</span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="2054" class="text-left"><span data-key="2053"><span data-offset-key="2053-0">Improved Guest Book</span></span></h3><p data-key="2056" class="text-left"><span data-key="2055"><span data-offset-key="2055-0">May 30, 2016</span></span></p><p data-key="2058" class="text-left"><span data-key="2057"><span data-offset-key="2057-0">Now we track your guests starting from the moment they make a reservation or put their names on your wait list. You can see and edit their profiles, make notes and look at their visiting history...</span></span></p></div></div></div></div>
+
+<!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
+    
+    <!-- ko widgetH: widget --><a href="#" class="btn btn-primary" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank">Read more</a><!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- /ko -->
+</div>
+
+<!-- /ko -->
+        <!-- /ko -->
+        <!-- ko if: rows().length === 0 --><!-- /ko -->
+    </div>
+</section><!-- /ko -->
+    
+    <!-- ko widgetH: section --><section style="background-color: #f8f8f8;" class="with-padding">
+    <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
+        <!-- ko foreach: { data: rows, as: 'row' } -->
+        <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-sm-4 col-md-4 col-lg-4 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko if: widgets().length > 0 --><!-- /ko -->
+
+    <!-- ko ifnot: widgets().length > 0 -->
+    <div class="empty-column">
+    </div>
+    <!-- /ko -->
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-sm-8 col-md-8 col-lg-8 middle-sm start-sm middle-md start-md middle-lg start-lg">
+    <!-- ko if: widgets().length > 0 -->
+    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h3 data-key="2079" class="text-left"><span data-key="2078"><span data-offset-key="2078-0">Dashboards &amp; Wizard</span></span></h3><p data-key="2081" class="text-left"><span data-key="2080"><span data-offset-key="2080-0">May 9, 2016</span></span></p><p data-key="2083" class="text-left"><span data-key="2082"><span data-offset-key="2082-0">We are pleased to tell you that we have shipped a major user interface update to our wait list and reservation modules. We are working on usability improvements to the app and this is...</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
@@ -392,7 +429,7 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h2 data-key="1218" class="text-center"><span data-key="1217"><span data-offset-key="1217-0"><span style="color: #ffffff;">Get it now!</span></span></span></h2><p data-key="1220" class="text-center"><span data-key="1219"><span data-offset-key="1219-0"><span style="color: #ffffff;">No setup fees. No cover fees. No contract.</span></span></span></p><p data-key="1222" class="text-center"><span data-key="1221"><span data-offset-key="1221-0"><span style="color: #ffffff;">What are you waiting for?</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h2 data-key="1771" class="text-center"><span data-key="1770"><span data-offset-key="1770-0"><span style="color: #ffffff;">Get it now!</span></span></span></h2><p data-key="1773" class="text-center"><span data-key="1772"><span data-offset-key="1772-0"><span style="color: #ffffff;">No setup fees. No cover fees. No contract.</span></span></span></p><p data-key="1775" class="text-center"><span data-key="1774"><span data-offset-key="1774-0"><span style="color: #ffffff;">What are you waiting for?</span></span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
@@ -423,7 +460,7 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1243" class="text-left"><span data-key="1242"><span data-offset-key="1242-0"><span style="color: #ffffff;">Quick links</span></span></span></p><p data-key="1245" class="text-left"><span data-key="1244"><span data-offset-key="1244-0"><span style="color: #f8f8f8;">Home</span></span></span></p><p data-key="1247" class="text-left"><span data-key="1246"><span data-offset-key="1246-0"><span style="color: #f8f8f8;">Reservations</span></span></span></p><p data-key="1249" class="text-left"><span data-key="1248"><span data-offset-key="1248-0"><span style="color: #f8f8f8;">Loyalty</span></span></span></p><p data-key="1251" class="text-left"><span data-key="1250"><span data-offset-key="1250-0"><span style="color: #f8f8f8;">About</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1796" class="text-left"><span data-key="1795"><span data-offset-key="1795-0"><span style="color: #ffffff;">Quick links</span></span></span></p><p data-key="1798" class="text-left"><span data-key="1797"><span data-offset-key="1797-0"><span style="color: #f8f8f8;">Home</span></span></span></p><p data-key="1800" class="text-left"><span data-key="1799"><span data-offset-key="1799-0"><span style="color: #f8f8f8;">Reservations</span></span></span></p><p data-key="1802" class="text-left"><span data-key="1801"><span data-offset-key="1801-0"><span style="color: #f8f8f8;">Loyalty</span></span></span></p><p data-key="1804" class="text-left"><span data-key="1803"><span data-offset-key="1803-0"><span style="color: #f8f8f8;">About</span></span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
@@ -433,7 +470,7 @@
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1272" class="text-left"><span data-key="1271"><span data-offset-key="1271-0"><span style="color: #ffffff;">Mobile apps</span></span></span></p><p data-key="1274" class="text-left"><span data-key="1273"><span data-offset-key="1273-0"><span style="color: #f8f8f8;">App store</span></span></span></p><p data-key="1276" class="text-left"><span data-key="1275"><span data-offset-key="1275-0"><span style="color: #f8f8f8;">Google play</span></span></span></p><p data-key="1278" class="text-left"><span data-key="1277"><span data-offset-key="1277-0"><span style="color: #f8f8f8;">Windows Store</span></span></span></p><p data-key="1280" class="text-left"><span data-key="1279"><span data-offset-key="1279-0"><span style="color: #f8f8f8;">HTML Application</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1825" class="text-left"><span data-key="1824"><span data-offset-key="1824-0"><span style="color: #ffffff;">Mobile apps</span></span></span></p><p data-key="1827" class="text-left"><span data-key="1826"><span data-offset-key="1826-0"><span style="color: #f8f8f8;">App store</span></span></span></p><p data-key="1829" class="text-left"><span data-key="1828"><span data-offset-key="1828-0"><span style="color: #f8f8f8;">Google play</span></span></span></p><p data-key="1831" class="text-left"><span data-key="1830"><span data-offset-key="1830-0"><span style="color: #f8f8f8;">Windows Store</span></span></span></p><p data-key="1833" class="text-left"><span data-key="1832"><span data-offset-key="1832-0"><span style="color: #f8f8f8;">HTML Application</span></span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
@@ -443,7 +480,7 @@
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1301" class="text-left"><span data-key="1300"><span data-offset-key="1300-0"><span style="color: #ffffff;">Legal</span></span></span></p><p data-key="1303" class="text-left"><span data-key="1302"><span data-offset-key="1302-0"><span style="color: #f8f8f8;">Pricing</span></span></span></p><p data-key="1305" class="text-left"><span data-key="1304"><span data-offset-key="1304-0"><span style="color: #f8f8f8;">Privacy</span></span></span></p><p data-key="1307" class="text-left"><span data-key="1306"><span data-offset-key="1306-0"><span style="color: #f8f8f8;">Terms of use</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1854" class="text-left"><span data-key="1853"><span data-offset-key="1853-0"><span style="color: #ffffff;">Legal</span></span></span></p><p data-key="1856" class="text-left"><span data-key="1855"><span data-offset-key="1855-0"><span style="color: #f8f8f8;">Pricing</span></span></span></p><p data-key="1858" class="text-left"><span data-key="1857"><span data-offset-key="1857-0"><span style="color: #f8f8f8;">Privacy</span></span></span></p><p data-key="1860" class="text-left"><span data-key="1859"><span data-offset-key="1859-0"><span style="color: #f8f8f8;">Terms of use</span></span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
@@ -453,7 +490,7 @@
 </div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1328" class="text-left"><span data-key="1327"><span data-offset-key="1327-0"><span style="color: #ffffff;">Social</span></span></span></p><p data-key="1330" class="text-left"><span data-key="1329"><span data-offset-key="1329-0"><span style="color: #f8f8f8;">Facebook</span></span></span></p><p data-key="1332" class="text-left"><span data-key="1331"><span data-offset-key="1331-0"><span style="color: #f8f8f8;">Twitter</span></span></span></p><p data-key="1334" class="text-left"><span data-key="1333"><span data-offset-key="1333-0"><span style="color: #f8f8f8;">LinkedIn</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1881" class="text-left"><span data-key="1880"><span data-offset-key="1880-0"><span style="color: #ffffff;">Social</span></span></span></p><p data-key="1883" class="text-left"><span data-key="1882"><span data-offset-key="1882-0"><span style="color: #f8f8f8;">Facebook</span></span></span></p><p data-key="1885" class="text-left"><span data-key="1884"><span data-offset-key="1884-0"><span style="color: #f8f8f8;">Twitter</span></span></span></p><p data-key="1887" class="text-left"><span data-key="1886"><span data-offset-key="1886-0"><span style="color: #f8f8f8;">LinkedIn</span></span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
@@ -469,7 +506,7 @@
     <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1355" class="text-center"><span data-key="1354"><span data-offset-key="1354-0"><span style="color: #eef1f2;">© 2017 Hostme LLC. All Rights Reserved.</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1908" class="text-center"><span data-key="1907"><span data-offset-key="1907-0"><span style="color: #eef1f2;">© 2017 Hostme LLC. All Rights Reserved.</span></span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->

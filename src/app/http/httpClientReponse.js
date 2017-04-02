@@ -1,0 +1,51 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var HttpClientReponse = (function () {
+    function HttpClientReponse(response) {
+        this.response = new Uint8Array(response);
+    }
+    HttpClientReponse.prototype.toByteArray = function () {
+        return this.response;
+    };
+    HttpClientReponse.prototype.toObject = function () {
+        var decodedString = this.utf8ArrayToStr(this.response);
+        return JSON.parse(decodedString);
+    };
+    HttpClientReponse.prototype.utf8ArrayToStr = function (array) {
+        var out, i, len, c;
+        var char2, char3;
+        out = "";
+        len = array.length;
+        i = 0;
+        while (i < len) {
+            c = array[i++];
+            switch (c >> 4) {
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                    out += String.fromCharCode(c);
+                    break;
+                case 12:
+                case 13:
+                    char2 = array[i++];
+                    out += String.fromCharCode(((c & 0x1F) << 6) | (char2 & 0x3F));
+                    break;
+                case 14:
+                    char2 = array[i++];
+                    char3 = array[i++];
+                    out += String.fromCharCode(((c & 0x0F) << 12) |
+                        ((char2 & 0x3F) << 6) |
+                        ((char3 & 0x3F) << 0));
+                    break;
+            }
+        }
+        return out;
+    };
+    return HttpClientReponse;
+}());
+exports.HttpClientReponse = HttpClientReponse;

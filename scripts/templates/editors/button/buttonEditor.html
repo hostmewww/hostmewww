@@ -1,0 +1,50 @@
+<div class="vienna-editor">
+    <h1>
+        Button
+    </h1>
+    <hr />
+    <fieldset class="vienna-form" data-bind="scrollable: {}">
+        <label><span class="help"></span>Label</label>
+        <div class="vienna-form-group">
+            <input type="text" data-bind="textInput: label" />
+        </div>
+
+        <div class="vienna-form-group">
+            <label>Link to</label>
+            <div data-bind="text: hyperlinkTitle" class="pull-left"></div>
+            <div class="vienna-toolbox-button pull-right" data-bind="css: { 'vienna-toolbox-button-is-active': hyperlink }" title="Hyperlink">
+                <a href="#" class="vienna-icon vienna-icon-smaller vienna-icon-hyperlink" data-bind="balloon: { target: '#hyperlinkSelector', position: 'bottom' }"></a>
+            </div>
+        </div>
+
+        <label><span class="help"></span>Style</label>
+        <div class="vienna-form-group">
+            <label>
+                <input name="style" type="radio" value="default" data-bind="checked: style" />Default
+            </label>
+            <label>
+                <input name="style" type="radio" value="primary" data-bind="checked: style" />Primary
+            </label>
+            <label>
+                <input name="style" type="radio" value="inverted" data-bind="checked: style" />Inverted
+            </label>
+        </div>
+
+        <label><span class="help"></span>Size</label>
+        <div class="vienna-form-group">
+            <label>
+                <input name="size" type="radio" value="default" data-bind="checked: size" />Default
+            </label>
+            <label>
+                <input name="size" type="radio" value="medium" data-bind="checked: size" />Medium
+            </label>
+            <label>
+                <input name="size" type="radio" value="large" data-bind="checked: size" />Large
+            </label>
+        </div>
+    </fieldset>
+
+    <div id="hyperlinkSelector" class="vienna-balloon">
+        <hyperlink-selector params="selectedPermalink: $component.hyperlink"></hyperlink-selector>
+    </div>
+</div>

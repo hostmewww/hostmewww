@@ -1,0 +1,73 @@
+<!--<div class="vienna-toolbox-button" >
+    <a href="#" data-bind="click: clearFormatting">
+        <span class="vienna-icon vienna-icon-clearformat">Clear formatting</span>
+    </a>
+</div>-->
+<div class="vienna-toolbox-button" data-bind="css: { 'vienna-toolbox-button-is-active': ol() }" title="Ordered list">
+    <a href="#" data-bind="click: toggleOl">
+        <span class="vienna-icon vienna-icon-smaller vienna-icon-orderedlist"></span>
+    </a>
+</div>
+<div class="vienna-toolbox-button" data-bind="css: { 'vienna-toolbox-button-is-active': ul() }" title="Unordered list">
+    <a href="#" data-bind="click: toggleUl">
+        <span class="vienna-icon vienna-icon-smaller vienna-icon-unorderedlist"></span>
+    </a>
+</div>
+<div class="vienna-toolbox-button" data-bind="css: { 'vienna-toolbox-button-is-active': bold() }" title="Bold">
+    <a href="#" data-bind="click: toggleBold">
+        <span class="vienna-icon vienna-icon-smaller vienna-icon-bold"></span>
+    </a>
+</div>
+<div class="vienna-toolbox-button" data-bind="css: { 'vienna-toolbox-button-is-active': italic() }" title="Italic">
+    <a href="#" data-bind="click: toggleItalic">
+        <span class="vienna-icon vienna-icon-smaller vienna-icon-italic"></span>
+    </a>
+</div>
+<div class="vienna-toolbox-button" data-bind="css: { 'vienna-toolbox-button-is-active': underlined() }" title="Underlined">
+    <a href="#" data-bind="click: toggleUnderlined">
+        <span class="vienna-icon vienna-icon-smaller vienna-icon-underline"></span>
+    </a>
+</div>
+<div class="vienna-toolbox-button vienna-toolbox-button-formatting" data-bind="balloon: { target: '#styleSelector', position: 'bottom' }"
+     title="Style">
+    <span data-bind="text: style" class="vienna-text"></span>
+</div>
+<div id="styleSelector" class="vienna-balloon tools-paragraphstyle">
+    <a href="#" class="tools-paragraph-style tools-paragraph-style-normal" data-bind="click: resetToNormal">Normal</a>
+    <a href="#" class="tools-paragraph-style tools-paragraph-style-h1" data-bind="click: toggleH1">Heading 1</a>
+    <a href="#" class="tools-paragraph-style tools-paragraph-style-h2" data-bind="click: toggleH2">Heading 2</a>
+    <a href="#" class="tools-paragraph-style tools-paragraph-style-h3" data-bind="click: toggleH3">Heading 3</a>
+    <a href="#" class="tools-paragraph-style tools-paragraph-style-h4" data-bind="click: toggleH4">Heading 4</a>
+    <a href="#" class="tools-paragraph-style tools-paragraph-style-h5" data-bind="click: toggleH5">Heading 5</a>
+    <a href="#" class="tools-paragraph-style tools-paragraph-style-h6" data-bind="click: toggleH6">Heading 6</a>
+    <a href="#" class="tools-paragraph-style tools-paragraph-style-normal" data-bind="click: toggleQuote">Quote</a>
+    <a href="#" class="tools-paragraph-style tools-paragraph-style-normal" data-bind="click: toggleCode">Code snippet</a>
+</div>
+<div class="vienna-toolbox-button" data-bind="css: { 'vienna-toolbox-button-is-active': alignedLeft() }" title="Align left">
+    <a href="#" data-bind="click: toggleAlignLeft">
+        <span class="vienna-icon vienna-icon-smaller vienna-icon-alignleft"></span>
+    </a>
+</div>
+<div class="vienna-toolbox-button" data-bind="css: { 'vienna-toolbox-button-is-active': alignedCenter() }" title="Align center">
+    <a href="#" data-bind="click: toggleAlignCenter">
+        <span class="vienna-icon vienna-icon-smaller vienna-icon-aligncenter"></span>
+    </a>
+</div>
+<div class="vienna-toolbox-button" data-bind="css: { 'vienna-toolbox-button-is-active': alignedRight() }" title="Align right">
+    <a href="#" data-bind="click: toggleAlignRight">
+        <span class="vienna-icon vienna-icon-smaller vienna-icon-alignright"></span>
+    </a>
+</div>
+<div class="vienna-toolbox-button" data-bind="css: { 'vienna-toolbox-button-is-active': justified() }" title="Justify">
+    <a href="#" data-bind="click: toggleJustify">
+        <span class="vienna-icon vienna-icon-smaller vienna-icon-justify"></span>
+    </a>
+</div>
+<div title="Text color" class="vienna-toolbox-button" data-bind="css: { 'vienna-toolbox-button-is-active': styled() }">
+    <a href="#" data-bind="balloon: { target: '#colorSelector', position: 'bottom' }">
+        <span class="vienna-icon vienna-icon-smaller vienna-icon-drop"></span>
+    </a>
+</div>
+<div id="colorSelector" class="vienna-balloon">
+    <color-selector params="selectedColor: color, setColorCallback: setColor.bind($data)"></color-selector>
+</div>

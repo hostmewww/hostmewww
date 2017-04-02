@@ -1,0 +1,18 @@
+<!--ko if: working()-->
+<spinner></spinner>
+<!--/ko-->
+
+<fieldset class="vienna-form">
+    <input class="vienna-control-textbox" type="search" data-bind="value: searchPattern, valueUpdate: 'keyup'" placeholder="Search layouts..."
+    />
+</fieldset>
+
+<ul class="vienna-list" data-bind="foreach: layouts, scrollable: {}">
+    <li class="vienna-list-item vienna-icon vienna-icon-layout" data-bind="css: { selected: hasFocus }">
+        <a href="#" data-bind="click: $parent.selectLayout, text: title, hasFocus: hasFocus, event: { keydown: $component.keydown }"></a>
+    </li>
+</ul>
+
+<div class="vienna-button-group">
+    <button class="vienna-button" data-bind="click: addLayout"><span class="vienna-icon vienna-icon-plus">Add layout</span></button>
+</div>

@@ -1,0 +1,20 @@
+<!--ko if: working()-->
+<spinner></spinner>
+<!--/ko-->
+
+<div class="flex-container flex-container-column fit">
+    <fieldset class="flex-item vienna-form">
+        <input class="vienna-control-textbox" type="search" data-bind="value: searchPattern, valueUpdate: 'keyup'" placeholder="Search pages..."
+        />
+    </fieldset>
+
+    <ul class="flex-item flex-item-grow vienna-list" data-bind="foreach: pages, scrollable: {}">
+        <li class="vienna-list-item vienna-icon vienna-icon-page" data-bind="css: { selected: hasFocus }">
+            <a href="#" data-bind="click: $parent.selectPage, text: title, hasFocus: hasFocus, event: { keydown: $component.keydown }"></a>
+        </li>
+    </ul>
+
+    <div class="flex-item vienna-button-group">
+        <button class="vienna-button" data-bind="click: addPage"><span class="vienna-icon vienna-icon-plus">Add page</span></button>
+    </div>
+</div>

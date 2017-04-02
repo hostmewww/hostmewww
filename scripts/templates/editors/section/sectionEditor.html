@@ -1,0 +1,119 @@
+<div class="vienna-editor">
+    <h1>
+        Section
+    </h1>
+    <hr />
+    <fieldset class="vienna-form" data-bind="scrollable: {}">
+
+        <label><span class="help"></span>Layout</label>
+        <div class="vienna-form-group">
+            <label>
+                <input name="layout" type="radio" value="container" data-bind="checked: layout" />Container
+            </label>
+            <label>
+                <input name="layout" type="radio" value="fluid" data-bind="checked: layout" />Fluid
+            </label>
+        </div>
+
+        <label><span class="help"></span>Padding</label>
+        <div class="vienna-form-group">
+            <label>
+                <input name="padding" type="radio" value="with-padding" data-bind="checked: padding" />With padding
+            </label>
+            <label>
+                <input name="padding" type="radio" value="without-padding" data-bind="checked: padding" />Without padding
+            </label>
+        </div>
+
+        <label><span class="help"></span>Snap to</label>
+        <div class="vienna-form-group">
+            <label>
+                <input name="size" type="radio" value="none" data-bind="checked: snap" />None
+            </label>
+            <label>
+                <input name="size" type="radio" value="top" data-bind="checked: snap" />Top
+            </label>
+            <label>
+                <input name="size" type="radio" value="bottom" data-bind="checked: snap" />Bottom
+            </label>
+        </div>
+
+        <label><span class="help"></span>Background</label>
+        <div class="vienna-form-group">
+            <div class="vienna-toolbox-button" data-bind="css: { 'vienna-toolbox-button-is-active': backgroundType()=='none' }" title="No background">
+                <a href="#" data-bind="click: clearBackground">
+                    <span class="vienna-icon vienna-icon-clear"></span>
+                </a>
+            </div>
+
+            <div class="vienna-toolbox-button" data-bind="css: { 'vienna-toolbox-button-is-active': backgroundType()=='picture' }" title="Background picture">
+                <a href="#" data-bind="click: setPictureBackground">
+                    <span class="vienna-icon vienna-icon-picture"></span>
+                </a>
+            </div>
+
+            <div class="vienna-toolbox-button" title="Background map">
+                <a href="#" data-bind="click: comingSoon">
+                    <span class="vienna-icon vienna-icon-map"></span>
+                </a>
+            </div>
+
+            <div class="vienna-toolbox-button" title="Background video">
+                <a href="#" data-bind="click: comingSoon">
+                    <span class="vienna-icon vienna-icon-video"></span>
+                </a>
+            </div>
+
+            <div class="vienna-toolbox-button pull-right" data-bind="background: { color: backgroundColor }" title="Background color">
+                <a href="#" data-bind="balloon: { target: '#colorSelector', position: 'top' }">
+                    <span class="vienna-icon vienna-icon-drop"></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- ko if: backgroundType() == "picture" -->
+
+        <div class="vienna-dropzone" data-bind="background: background, balloon: { target: '#mediaSelector', position: 'top' }">
+        </div>
+
+        <label><span class="help"></span>Background picture sizing</label>
+        <div class="vienna-form-group">
+            <label>
+                <input name="size" type="radio" value="contain" data-bind="checked: backgroundSize" />Contain
+            </label>
+            <label>
+                <input name="size" type="radio" value="cover" data-bind="checked: backgroundSize" />Cover
+            </label>
+        </div>
+
+        <div class="vienna-form-group">
+            <label><span class="help"></span>Background picture alignment</label>
+            <table class="background-alignment">
+                <tr>
+                    <td><button class="vienna-icon vienna-icon-arrow-up-left" data-bind="click: backgroundPosition.bind($component, 'top left')"></button></td>
+                    <td><button class="vienna-icon vienna-icon-arrow-up" data-bind="click: backgroundPosition.bind($component, 'top center')"></button></td>
+                    <td><button class="vienna-icon vienna-icon-arrow-up-right" data-bind="click: backgroundPosition.bind($component, 'top right')"></button></td>
+                </tr>
+                <tr>
+                    <td><button class="vienna-icon vienna-icon-arrow-left" data-bind="click: backgroundPosition.bind($component, 'center left')"></button></td>
+                    <td><button class="vienna-icon vienna-icon-arrow-center" data-bind="click: backgroundPosition.bind($component, 'center center')"></button></td>
+                    <td><button class="vienna-icon vienna-icon-arrow-right" data-bind="click: backgroundPosition.bind($component, 'center right')"></button></td>
+                </tr>
+                <tr>
+                    <td><button class="vienna-icon vienna-icon-arrow-down-left" data-bind="click: backgroundPosition.bind($component, 'bottom left')"></button></td>
+                    <td><button class="vienna-icon vienna-icon-arrow-down" data-bind="click: backgroundPosition.bind($component, 'bottom center')"></button></td>
+                    <td><button class="vienna-icon vienna-icon-arrow-down-right" data-bind="click: backgroundPosition.bind($component, 'bottom right')"></button></td>
+                </tr>
+            </table>
+        </div>
+        <!-- /ko -->
+    </fieldset>
+
+    <div id="mediaSelector" class="vienna-balloon">
+        <media-selector params="onSelect: $component.onMediaSelected"></media-selector>
+    </div>
+
+    <div id="colorSelector" class="vienna-balloon">
+        <color-selector params="selectedColor: $component.backgroundColor"></color-selector>
+    </div>
+</div>

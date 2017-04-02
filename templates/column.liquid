@@ -1,6 +1,0 @@
-<div class="{% if sizeXs %}col-xs-{{sizeXs}}{% if offsetXs %} col-xs-offset-{{offsetXs}}{% endif %}{% endif %}
-{% if sizeMd %} col-md-{{sizeMd}}{% if offsetMd %} col-md-offset-{{offsetMd}}{% endif %}{% endif %}">
-{% for widget in widgets %}
-{% include {{widget.nodeType}} with widget %}
-{% endfor %}
-</div>

@@ -1,0 +1,9 @@
+
+<!--ko if: working()-->
+<spinner></spinner>
+<!--/ko-->
+<ul class="vienna-list" data-bind="foreach: layouts, scrollable: {}">
+    <li class="vienna-list-item vienna-icon vienna-icon-page" data-bind="css: { selected: hasFocus }">
+        <a href="#" data-bind="click: $component.selectLayout, text: title, hasFocus: hasFocus, event: { keydown: $component.keydown }"></a>
+    </li>
+</ul>

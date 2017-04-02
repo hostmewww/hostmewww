@@ -1,1 +1,0 @@
-<a href="{{data.href}}">{% for node in nodes %}{% include "textnode" with node %}{% if node.type %}{% include {{node.type}} with node %}{% endif %}{% endfor %}</a>

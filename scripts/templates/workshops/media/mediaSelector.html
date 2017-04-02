@@ -1,0 +1,8 @@
+<!--ko if: working()-->
+<spinner></spinner>
+<!--/ko-->
+<ul class="vienna-list" data-bind="foreach: mediaItems, scrollable: {}">
+    <li class="vienna-list-item vienna-icon vienna-icon-image" data-bind="css: { selected: hasFocus }">
+        <a href="#" data-bind="click: $component.selectMedia, text: media.filename, hasFocus: hasFocus, event: { keydown: $component.keydown }"></a>
+    </li>
+</ul>

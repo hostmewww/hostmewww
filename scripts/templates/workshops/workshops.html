@@ -1,0 +1,57 @@
+<div class="vienna-toolbox vienna-workshops-container flex-container flex-container-row" data-bind="visible: viewManager.primaryToolboxVisible">
+    <ul class="vienna-toolbox-primary flex-item">
+        <li>
+            <a title="Pages" href="#" class="vienna-toolbox-button" role="button" data-bind="click: openPages, css: { 'vienna-toolbox-button-is-open': journey() == 'pages' }">
+                <span class="vienna-icon vienna-icon-pages"></span>
+            </a>
+        </li>
+        <li>
+            <a title="Blog" href="#" class="vienna-toolbox-button" role="button" data-bind="click: openBlogs, css: { 'vienna-toolbox-button-is-open': journey() == 'blogs' }">
+                <span class="vienna-icon vienna-icon-blogs"></span>
+            </a>
+        </li>
+        <li>
+            <a title="News" href="#" class="vienna-toolbox-button" role="button" data-bind="click: openNews, css: { 'vienna-toolbox-button-is-open': journey() == 'news' }">
+                <span class="vienna-icon vienna-icon-news"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" title="Navigation" class="vienna-toolbox-button" role="button" data-bind="click: openNavigation, css: { 'vienna-toolbox-button-is-open': journey() == 'navigation' }">
+                <span class="vienna-icon vienna-icon-menus"></span>
+            </a>
+        </li>
+        <li>
+            <a title="Layouts" href="#" class="vienna-toolbox-button" role="button" data-bind="click: openLayouts, css: { 'vienna-toolbox-button-is-open': journey() == 'layouts' }">
+                <span class="vienna-icon vienna-icon-layout"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" title="Uploads" class="vienna-toolbox-button" role="button" data-bind="click: openMedia, css: { 'vienna-toolbox-button-is-open': journey() == 'media' }">
+                <span class="vienna-icon vienna-icon-picture"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" title="Widgets" class="vienna-toolbox-button" role="button" data-bind="click: openWidgets, css: { 'vienna-toolbox-button-is-open': journey() == 'widgets' }">
+                <span class="vienna-icon vienna-icon-widget"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" title="Settings" class="vienna-toolbox-button" role="button" data-bind="click: openSettings, css: { 'vienna-toolbox-button-is-open': journey() == 'settings' }">
+                <span class="vienna-icon vienna-icon-gears"></span>
+            </a>
+        </li>
+    </ul>
+
+    <!--ko if: viewManager.journey().length>0 -->
+    <div class="flex-container flex-container-column flex-item flex-item-grow workshop">
+        <div class="flex-item">
+            <a href="#" class="vienna-button-close" data-bind="click: closeJourney">&#10006;</a>
+            <h1 data-bind="text: viewManager.journeyName"></h1>
+            <hr />
+        </div>
+        <div class="flex-item flex-item-grow flex-container flex-container-row workshop-journey" data-bind="foreach: viewManager.journey()">
+            <div class="flex-item workshop-journey-step" data-bind="component: { name: name, params: params }"></div>
+        </div>
+    </div>
+    <!--/ko-->
+</div>

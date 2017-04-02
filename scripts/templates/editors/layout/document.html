@@ -1,0 +1,9 @@
+<!--ko if: layoutModel()-->
+<div data-bind="widgetH: layoutModel(), layout-grid: { disabled: disableTracking }"></div>
+<!--/ko-->
+
+<!--ko if: working()-->
+<div class="shutter">
+    <spinner></spinner>
+</div>
+<!--/ko-->

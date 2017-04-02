@@ -1,0 +1,11 @@
+<!--ko if: working()-->
+<spinner></spinner>
+<!--/ko-->
+<div class="vienna-editor">
+    <h1>Add widget</h1>
+    <ul class="vienna-list" data-bind="foreach: widgets, scrollable: {}">
+        <li class="vienna-list-item vienna-icon vienna-icon-widget" data-bind="css: { selected: hasFocus }">
+            <a href="#" data-bind="text: title, hasFocus: hasFocus, click: $component.selectWidget"></a>
+        </li>
+    </ul>
+</div>

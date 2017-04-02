@@ -1,0 +1,7 @@
+<div class="vienna-toolbox-button" data-bind="css: { 'vienna-toolbox-button-is-active': hyperlink() }" title="Hyperlink">
+    <a href="#" class="vienna-icon vienna-icon-smaller vienna-icon-hyperlink" data-bind="balloon: { target: '#hyperlinkSelector', position: 'bottom' }"></a>
+</div>
+
+<div id="hyperlinkSelector" class="vienna-balloon">
+    <hyperlink-selector params="selectedPermalink: $component.hyperlink"></hyperlink-selector>
+</div>

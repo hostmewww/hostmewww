@@ -1,304 +1,461 @@
-<!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang=""><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- SITE TITLE  -->
+    <title>HostMe | Blog</title>
 
-	<!-- SITE TITLE  -->
-	<title>HostMe | Blog</title>
+    <!-- SITE META  -->
+    <meta name="description" content="HostMe's Blog for restaurant's managers and owners. Learn more about industry trends and stay up to date with our reservation, wait list and loylaty system updates.">
+    <meta name="keywords" content="marketing, promote restaurant, social media, table management, restaurant, waiting list, wait list, reservation, loylaty, patron, pager, no wait, open table, marketing, social channel, free, digital marketing">
+    <meta name="author" content="Hostme LLC">
 
-	<!-- SITE META  -->
-	<meta name="description" content="HostMe's Blog for restaurant's managers and owners. Learn more about industry trends and stay up to date with our reservation, wait list and loylaty system updates.">
-	<meta name="keywords" content="marketing, promote restaurant, social media, table management, restaurant, waiting list, wait list, reservation, loylaty, patron, pager, no wait, open table, marketing, social channel, free, digital marketing">
-	<meta name="author" content="Hostme LLC">
+    <!-- MOBILE META  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- MOBILE META  -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- FAV ICON  -->
+    <link rel="icon" type="image/ico" href="/img/icons/favicon.png">
 
-	<!-- FAV ICON  -->
-	<link rel="icon" type="image/ico" href="/img/icons/favicon.png" />
+    <!-- APPLE TOUCH ICON  -->
+    <link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/icons/apple-touch-icon-114x114.png">
 
-	<!-- APPLE TOUCH ICON  -->
-	<link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/img/icons/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/img/icons/apple-touch-icon-114x114.png">
+    <!-- NORMALIZE CSS  -->
+    <link rel="stylesheet" href="/css/normalize.css">
 
-	<!-- NORMALIZE CSS  -->
-	<link rel="stylesheet" href="/css/normalize.css">
+    <!-- FONT-AWESOME CSS  -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
 
-	<!-- FONT-AWESOME CSS  -->
-	<link rel="stylesheet" href="/css/font-awesome.min.css">
+    <!-- PRETTYPHOTO CSS  -->
+    <link rel="stylesheet" href="/css/prettyPhoto.css">
 
-	<!-- PRETTYPHOTO CSS  -->
-	<link rel="stylesheet" href="/css/prettyPhoto.css">
+    <!-- SLICK CSS  -->
+    <link rel="stylesheet" href="/css/slick.css">
 
-	<!-- SLICK CSS  -->
-	<link rel="stylesheet" href="/css/slick.css">
+    <!-- BOOTSTRAP CSS  -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
-	<!-- BOOTSTRAP CSS  -->
-	<link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- ON SCROLL ANIMATION CSS  -->
+    <link rel="stylesheet" href="/css/animate.min.css">
 
-	<!-- ON SCROLL ANIMATION CSS  -->
-	<link rel="stylesheet" href="/css/animate.min.css">
+    <!-- MAIN CSS  -->
+    <link rel="stylesheet" href="/css/style.css">
 
-	<!-- MAIN CSS  -->
-	<link rel="stylesheet" href="/css/style.css">
+    <!-- RESPONSIVE CSS  -->
+    <link rel="stylesheet" href="/css/responsive.css">
 
-	<!-- RESPONSIVE CSS  -->
-	<link rel="stylesheet" href="/css/responsive.css">
+    <!-- COLORS CSS  -->
+    <link rel="stylesheet" href="/css/colors.css">
 
-	<!-- COLORS CSS  -->
-	<link rel="stylesheet" href="/css/colors.css">
+    <!-- GOOGLE WEB FONT  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,300italic" rel="stylesheet" type="text/css">
 
-	<!-- GOOGLE WEB FONT  -->
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,300italic' rel='stylesheet' type='text/css'>
-
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+
+    <link href="/css/paperbits.css" rel="stylesheet" type="text/css">
+    <script src="/scripts/vendor.js" type="text/javascript"></script>
+    <script src="/scripts/paperbits.js" type="text/javascript"></script>
+
 </head>
 
 <body>
-	<!-- NAV MENU -->
-    <nav class="navbar navbar-default navbar-fixed-top scroll-nav">
-		<div class="container">
-		
-			<!-- LOGO/RESPONSIVE TOGGLE ICON -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				
-				<!-- LOGO -->
-				<a class="navbar-brand logo" href="http://hostmeapp.com"><img src="http://www.hostmeapp.com/img/logo@2x.png" alt="" width="119" height="34"></a>
-				
-			</div>
+    <paper-doc><!--ko if: layoutModel()-->
+<div data-bind="widgetH: layoutModel(), layout-grid: { disabled: disableTracking }"><!-- ko if: widgets().length > 0 -->
+<!-- ko foreach: { data: widgets, as: 'widget'  } -->
+<div data-bind="widgetH: widget"><section style="background-color: #ffffff;">
+    <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
+        <!-- ko foreach: { data: rows, as: 'row' } -->
+        <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-3 middle-sm start-sm middle-md start-md middle-lg start-lg">
+    <!-- ko if: widgets().length > 0 -->
+    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
+    <!-- ko widgetH: widget --><div class="picture noframe" data-bind="css: css, widget: {}">
+    <!-- ko if: layout() === "polaroid" --><!-- /ko -->
 
-			<!-- NAVIGATION -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right" id="nav">
-					<li><a href="../">Home</a></li>
-					<li><a href="../pricing/">Pricing</a></li>
-					<li><a href="../about/">About</a></li>
-					<li class="current"><a href="../blog/">Blog</a></li>
-					<li><a href="../news/">News</a></li>
-					<li><a href="https://panel.hostmeapp.com">Login</a></li>
-					<li id="featured-sign-up"><a href="../sign-up/">Sign Up Free</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<!-- END NAV MENU -->
+    <!-- ko if: layout() === "circle" --><!-- /ko -->
 
-    <header id="home" class="header-section-3" style="background-image: url(../img/bg/news-cover.png);">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12">
+    <!-- ko if: layout() === "noframe" -->
+    <img class="content" data-bind="attr: { src: sourceUrl, alt: caption }" src="/content/logo@2x.png" alt="Picture">
+    <!-- /ko -->
+</div><!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
 
-					<!-- HEADING TEXT 3 -->
-					<div class="intro-text-3 text-center">
-						<p>Hostme Blog</p>
-						<h1> Understanding OpenTable's game plan and how to cut your bill without losing customers</h1>
-					</div>
+    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-9 middle-sm end-sm middle-md end-md middle-lg end-lg">
+    <!-- ko if: widgets().length > 0 -->
+    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
+    <!-- ko widgetH: widget --><nav class="navbar navbar-default navbar-collapse" data-bind="with: root(), widget: {}">
+    <ul class="nav navbar-nav navbar-right" data-bind="foreach: nodes(), css: { 'navbar-right': $component.alignRight }">
+        <!--ko if: nodes().length > 0 --><!--/ko-->
+        <!--ko ifnot: nodes().length > 0 -->
+        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
+            <a data-bind="text: label, attr: { href: url }" href="/">Home</a>
+        </li>
+        <!--/ko-->
+    
+        <!--ko if: nodes().length > 0 --><!--/ko-->
+        <!--ko ifnot: nodes().length > 0 -->
+        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
+            <a data-bind="text: label, attr: { href: url }" href="/pricing">Pricing</a>
+        </li>
+        <!--/ko-->
+    
+        <!--ko if: nodes().length > 0 --><!--/ko-->
+        <!--ko ifnot: nodes().length > 0 -->
+        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
+            <a data-bind="text: label, attr: { href: url }" href="/blog">Blog</a>
+        </li>
+        <!--/ko-->
+    
+        <!--ko if: nodes().length > 0 --><!--/ko-->
+        <!--ko ifnot: nodes().length > 0 -->
+        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
+            <a data-bind="text: label, attr: { href: url }" href="/about">About</a>
+        </li>
+        <!--/ko-->
+    
+        <!--ko if: nodes().length > 0 --><!--/ko-->
+        <!--ko ifnot: nodes().length > 0 -->
+        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
+            <a data-bind="text: label, attr: { href: url }" href="/news">News</a>
+        </li>
+        <!--/ko-->
+    
+        <!--ko if: nodes().length > 0 --><!--/ko-->
+        <!--ko ifnot: nodes().length > 0 -->
+        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
+            <a data-bind="text: label, attr: { href: url }" href="https://help.hostmeapp.com">Help</a>
+        </li>
+        <!--/ko-->
+    
+        <!--ko if: nodes().length > 0 --><!--/ko-->
+        <!--ko ifnot: nodes().length > 0 -->
+        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
+            <a data-bind="text: label, attr: { href: url }" href="https://panel.hostmeapp.com">Sign In</a>
+        </li>
+        <!--/ko-->
+    </ul>
+</nav>
 
-				</div>
-			</div>
-		</div>
-	</header>
+<script id="navigationItemTemplate" type="text/html">
+    <ul class="dropdown-menu" data-bind="foreach: nodes()">
+        <!--ko if: nodes().length > 0 -->
+        <li class="dropdown dropdown-submenu">
+            <a class="dropdown-toggle" data-toggle="dropdown" data-bind="attr: { href: url }">
+                <span data-bind="text: label"></span>
+                <!--<span class="caret"></span>-->
+            </a>
+            <!--ko template: { name: 'ttt', data: $data }--><!--/ko-->
+        </li>
+        <!--/ko-->
+        <!--ko ifnot: nodes().length > 0 -->
+        <li>
+            <a data-bind="text: label, attr: { href: url }"></a>
+        </li>
+        <!--/ko-->
+    </ul>
+</script><!-- /ko -->
+    
+    <!-- ko widgetH: widget --><a href="#" class="btn btn-primary" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank">Try now</a><!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
 
-
-	<div class="blog-section blog-text">
-    <section>
-<div class="container">
-<div class="row">
-<div class=" col-md-12">
-<p>As a restaurant owner, you may be getting tired of how much you pay OpenTable every single month and you have probably noticed that the bill is getting disproportionately higher while the number of reservations is stagnating. In this post, we will explain what is OpenTable's game plan to drive restaurants' OpenTable bills up.</p>
-<p></p>
-<p>OpenTable pricing model consists of three components: an average of $1K setup\hardware onetime fee, about 200$ monthly subscription fee and from $0.25 to $7.50 per diner per booking reservation fee. Reservation fees vary according to the following rules: $0.25 per diner for reservations that originated from the restaurant's website, $1 per diner for reservations that originated from OpenTable website or mobile app and finally $7.50 per diner for reservations made through OpenTable 1000 point table program. The whole idea of the 1000 point table program is as follow: diner gets 1000 OpenTable reward points for making reservation at certain times of the day and the restaurants have to pay an extra fee for this service. Granted, OpenTable may be helping you to fill tables in slow time but at what cost! To put it another way - restaurants subsidize OpenTable's loyalty program, instead of spending this money to build thier loyal customer's base!</p>
-<p></p>
-<p>Recently, OpenTable revenues went up compared to same time last year while the number of participating restaurants did not increase proportionally. And the explanation for such dramatic growth is partnerships with companies like Google, Yelp, TripAdvisor and Bing. Here is how OpenTable increases its reservation's revenue at restaurant's expense.</p>
+    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- /ko -->
 </div>
-</div><div class="row">
-<div class=" col-md-12">
 
+<!-- /ko -->
+        <!-- /ko -->
+        <!-- ko if: rows().length === 0 --><!-- /ko -->
+    </div>
+</section></div>
 
-<div class="picture">
-    <img src="https://firebasestorage.googleapis.com/v0/b/project-3416595241267839719.appspot.com/o/tenants%2Fdefault%2Fopentable-how-reservations-source.png?alt=media&token=7da97b85-5691-4152-af54-e421243629d3" alt="opentable-how-reservations-source.png" class="content">
-</div>
-</div>
-</div><div class="row">
-<div class=" col-md-12">
-<p>In occasional instances, diners would go to OpenTable website or mobile app to search for a restaurant and make a reservation. In most cases, however, patrons use Google, Bing, Yelp or TripAdvisor to search for a place and read reviews before making their reservation. When using a third party tool other than OpenTable, patrons land on a search result page more or less like this one:</p>
-</div>
-</div><div class="row">
-<div class=" col-md-12">
+<div data-bind="widgetH: widget"><div data-bind="content-grid: {}">
+    <!-- ko foreach: { data: sections, as: 'section' } -->
+    <!-- ko widgetH: section --><section style="background-image: url(&quot;/content/bb-cover.jpg&quot;); background-size: cover; background-position: center center; background-color: transparent;" class="with-padding">
+    <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
+        <!-- ko foreach: { data: rows, as: 'row' } -->
+        <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko if: widgets().length > 0 -->
+    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1470" class="text-center"><span data-key="1469"><span data-offset-key="1469-0"><span style="color: #fff;">Hostme Blog</span></span></span></p><h2 data-key="1472" class="text-center"><span data-key="1471"><span data-offset-key="1471-0"><span style="color: #fff;">Understanding OpenTable's game plan and how to cut your bill without losing customers</span></span></span></h2></div></div></div></div>
 
+<!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
 
-<div class="picture">
-    <img src="https://firebasestorage.googleapis.com/v0/b/project-3416595241267839719.appspot.com/o/tenants%2Fdefault%2Fopentable-how-search-result.png?alt=media&token=ee3b7a89-43ae-473e-8b0c-997a6aad2e3c" alt="opentable-how-search-result.png" class="content">
+    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- /ko -->
 </div>
-</div>
-</div><div class="row">
-<div class=" col-md-12">
-<p>If a restaurant's website is optimized for search engines, the result page will have two reservation links: one to the restaurant's website reservation page and another to the Open Table website reservation page. One will cost restaurant $0.25 and another $1.0 per dinner. As a diner, you don't really care which one to use as long as you will get to the place where you can make a reservation. But Google, Bing, Yelp, TripAdvisors make it more intuitive for visitors to click on the more costly direct OpenTable link. Because they partnered with OpenTable, they will get a share of the hefty fee paid by the restaurant for each reservation made through their website.</p>
-<p></p>
-<p>If a restaurant decides not participate in OpenTable program and optimizes their site with Search Engine Optimization, patrons will only see one link to make a reservation and this reservation will be at no cost for the restaurants. Hostme can provide restaurants with a reservation system that can replace OpenTable reservation widget on restaurant's website and start saving thousands of dollars!</p>
-</div>
-</div><div class="row">
-<div class=" col-md-12">
 
+<!-- /ko -->
+        <!-- /ko -->
+        <!-- ko if: rows().length === 0 --><!-- /ko -->
+    </div>
+</section><!-- /ko -->
+    
+    <!-- ko widgetH: section --><section style="background-color: transparent;" class="with-padding">
+    <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
+        <!-- ko foreach: { data: rows, as: 'row' } -->
+        <!-- ko widgetH: row --><div class="row center-md" data-bind="css: css, layoutrow: {}">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko if: widgets().length > 0 -->
+    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1493" class="text-left"><span data-key="1492"><span data-offset-key="1492-0">As a restaurant owner, you may be getting tired of how much you pay OpenTable every single month and you have probably noticed that the bill is getting disproportionately higher while the number of reservations is stagnating. In this post, we will explain what is OpenTable's game plan to drive restaurants' OpenTable bills up.</span></span></p><p data-key="1495" class="text-left"><span data-key="1494"><span data-offset-key="1494-0"><br></span></span></p><p data-key="1497" class="text-left"><span data-key="1496"><span data-offset-key="1496-0">OpenTable pricing model consists of three components: an average of $1K setup\hardware onetime fee, about 200$ monthly subscription fee and from $0.25 to $7.50 per diner per booking reservation fee. Reservation fees vary according to the following rules: $0.25 per diner for reservations that originated from the restaurant's website, $1 per diner for reservations that originated from OpenTable website or mobile app and finally $7.50 per diner for reservations made through OpenTable 1000 point table program. The whole idea of the 1000 point table program is as follow: diner gets 1000 OpenTable reward points for making reservation at certain times of the day and the restaurants have to pay an extra fee for this service. Granted, OpenTable may be helping you to fill tables in slow time but at what cost! To put it another way - restaurants subsidize OpenTable's loyalty program, instead of spending this money to build thier loyal customer's base!</span></span></p><p data-key="1499" class="text-left"><span data-key="1498"><span data-offset-key="1498-0"></span></span></p><p data-key="1501" class="text-left"><span data-key="1500"><span data-offset-key="1500-0">Recently, OpenTable revenues went up compared to same time last year while the number of participating restaurants did not increase proportionally. And the explanation for such dramatic growth is partnerships with companies like Google, Yelp, TripAdvisor and Bing. Here is how OpenTable increases its reservation's revenue at restaurant's expense.</span></span></p></div></div></div></div>
 
-<div class="picture">
-    <img src="https://firebasestorage.googleapis.com/v0/b/project-3416595241267839719.appspot.com/o/tenants%2Fdefault%2Fwidget-desktop-site.jpg?alt=media&token=395038fc-ddeb-4ae9-84a8-7d13cb5d5954" alt="Hostme reservation widget" class="content">
+<!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- /ko -->
 </div>
+
+<!-- /ko -->
+        
+        <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko if: widgets().length > 0 -->
+    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
+    <!-- ko widgetH: widget --><div class="picture noframe" data-bind="css: css, widget: {}">
+    <!-- ko if: layout() === "polaroid" --><!-- /ko -->
+
+    <!-- ko if: layout() === "circle" --><!-- /ko -->
+
+    <!-- ko if: layout() === "noframe" -->
+    <img class="content" data-bind="attr: { src: sourceUrl, alt: caption }" src="/content/opentable-how-reservations-source.png" alt="opentable-how-reservations-source.png">
+    <!-- /ko -->
+</div><!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- /ko -->
 </div>
-</div><div class="row">
-<div class=" col-md-12">
-<p>Renowned restaurateurs Mark Pastore shares his views about OpenTable in <a href="http://incanto.biz/2010/10/22/is-opentable-worth-it/">this article</a>. He took an internal survey of other restaurant owners and wrote. "Only one of the dozen or so I spoke with said he felt that OpenTable increased the value of his restaurant and that he wouldn't imagine opening a new project without it. The rest were less than happy... feeling of being trapped in the service, it was too expensive to keep, but letting it go could be harmful." The reason why restaurants' owners are feeling trapped is because of the great marketing job that OpenTable has done positioning themselves as the main source of reservations, when in a reality they are just a middleman that can be replaced unnoticeably.</p>
+
+<!-- /ko -->
+        
+        <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko if: widgets().length > 0 -->
+    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1522" class="text-left"><span data-key="1521"><span data-offset-key="1521-0">In occasional instances, diners would go to OpenTable website or mobile app to search for a restaurant and make a reservation. In most cases, however, patrons use Google, Bing, Yelp or TripAdvisor to search for a place and read reviews before making their reservation. When using a third party tool other than OpenTable, patrons land on a search result page more or less like this one:</span></span></p></div></div></div></div>
+
+<!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- /ko -->
 </div>
+
+<!-- /ko -->
+        
+        <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko if: widgets().length > 0 -->
+    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
+    <!-- ko widgetH: widget --><div class="picture noframe" data-bind="css: css, widget: {}">
+    <!-- ko if: layout() === "polaroid" --><!-- /ko -->
+
+    <!-- ko if: layout() === "circle" --><!-- /ko -->
+
+    <!-- ko if: layout() === "noframe" -->
+    <img class="content" data-bind="attr: { src: sourceUrl, alt: caption }" src="/content/opentable-how-search-result.png" alt="opentable-how-search-result.png">
+    <!-- /ko -->
+</div><!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- /ko -->
+</div>
+
+<!-- /ko -->
+        
+        <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko if: widgets().length > 0 -->
+    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1543" class="text-left"><span data-key="1542"><span data-offset-key="1542-0">If a restaurant's website is optimized for search engines, the result page will have two reservation links: one to the restaurant's website reservation page and another to the Open Table website reservation page. One will cost restaurant $0.25 and another $1.0 per dinner. As a diner, you don't really care which one to use as long as you will get to the place where you can make a reservation. But Google, Bing, Yelp, TripAdvisors make it more intuitive for visitors to click on the more costly direct OpenTable link. Because they partnered with OpenTable, they will get a share of the hefty fee paid by the restaurant for each reservation made through their website.</span></span></p><p data-key="1545" class="text-left"><span data-key="1544"><span data-offset-key="1544-0"></span></span></p><p data-key="1547" class="text-left"><span data-key="1546"><span data-offset-key="1546-0">If a restaurant decides not participate in OpenTable program and optimizes their site with Search Engine Optimization, patrons will only see one link to make a reservation and this reservation will be at no cost for the restaurants. Hostme can provide restaurants with a reservation system that can replace OpenTable reservation widget on restaurant's website and start saving thousands of dollars!</span></span></p></div></div></div></div>
+
+<!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- /ko -->
+</div>
+
+<!-- /ko -->
+        
+        <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko if: widgets().length > 0 -->
+    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
+    <!-- ko widgetH: widget --><div class="picture noframe" data-bind="css: css, widget: {}">
+    <!-- ko if: layout() === "polaroid" --><!-- /ko -->
+
+    <!-- ko if: layout() === "circle" --><!-- /ko -->
+
+    <!-- ko if: layout() === "noframe" -->
+    <img class="content" data-bind="attr: { src: sourceUrl, alt: caption }" src="/content/widget-desktop-site.jpg" alt="Hostme reservation widget">
+    <!-- /ko -->
+</div><!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- /ko -->
+</div>
+
+<!-- /ko -->
+        
+        <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko if: widgets().length > 0 -->
+    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1571" class="text-left"><span data-key="1567"><span data-offset-key="1567-0">Renowned restaurateurs Mark Pastore shares his views about OpenTable in </span></span><a href="http://incanto.biz/2010/10/22/is-opentable-worth-it/" data-key="1569"><span data-key="1568"><span data-offset-key="1568-0">this article</span></span></a><span data-key="1570"><span data-offset-key="1570-0">. He took an internal survey of other restaurant owners and wrote. "Only one of the dozen or so I spoke with said he felt that OpenTable increased the value of his restaurant and that he wouldn't imagine opening a new project without it. The rest were less than happy... feeling of being trapped in the service, it was too expensive to keep, but letting it go could be harmful." The reason why restaurants' owners are feeling trapped is because of the great marketing job that OpenTable has done positioning themselves as the main source of reservations, when in a reality they are just a middleman that can be replaced unnoticeably.</span></span></p></div></div></div></div>
+
+<!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- /ko -->
+</div>
+
+<!-- /ko -->
+        <!-- /ko -->
+        <!-- ko if: rows().length === 0 --><!-- /ko -->
+    </div>
+</section><!-- /ko -->
+    <!-- /ko -->
 </div></div>
-</section>    	</div>
+
+<div data-bind="widgetH: widget"><section style="background-color: #eeb087;" class="with-padding">
+    <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
+        <!-- ko foreach: { data: rows, as: 'row' } -->
+        <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko if: widgets().length > 0 -->
+    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h2 data-key="1312" class="text-center"><span data-key="1311"><span data-offset-key="1311-0"><span style="color: #ffffff;">Get it now!</span></span></span></h2><p data-key="1314" class="text-center"><span data-key="1313"><span data-offset-key="1313-0"><span style="color: #ffffff;">No setup fees. No cover fees. No contract.</span></span></span></p><p data-key="1316" class="text-center"><span data-key="1315"><span data-offset-key="1315-0"><span style="color: #ffffff;">What are you waiting for?</span></span></span></p></div></div></div></div>
+
+<!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
+    
+    <!-- ko widgetH: widget --><a href="#" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank">App Store</a><!-- /ko -->
+    
+    <!-- ko widgetH: widget --><a href="#" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank">Google Play</a><!-- /ko -->
+    
+    <!-- ko widgetH: widget --><a href="#" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank">Windows Store</a><!-- /ko -->
+    
+    <!-- ko widgetH: widget --><a href="#" class="btn btn-inverted btn-large" data-bind="text: label, css: css, widget: {}, hyperlink: hyperlink" target="_blank">PC / Mac</a><!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- /ko -->
+</div>
+
+<!-- /ko -->
+        <!-- /ko -->
+        <!-- ko if: rows().length === 0 --><!-- /ko -->
+    </div>
+</section></div>
+
+<div data-bind="widgetH: widget"><section style="background-color: #2a2f30;" class="with-padding">
+    <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
+        <!-- ko foreach: { data: rows, as: 'row' } -->
+        <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
+    <!-- ko if: widgets().length > 0 -->
+    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1337" class="text-left"><span data-key="1336"><span data-offset-key="1336-0"><span style="color: #ffffff;">Quick links</span></span></span></p><p data-key="1339" class="text-left"><span data-key="1338"><span data-offset-key="1338-0"><span style="color: #f8f8f8;">Home</span></span></span></p><p data-key="1341" class="text-left"><span data-key="1340"><span data-offset-key="1340-0"><span style="color: #f8f8f8;">Reservations</span></span></span></p><p data-key="1343" class="text-left"><span data-key="1342"><span data-offset-key="1342-0"><span style="color: #f8f8f8;">Loyalty</span></span></span></p><p data-key="1345" class="text-left"><span data-key="1344"><span data-offset-key="1344-0"><span style="color: #f8f8f8;">About</span></span></span></p></div></div></div></div>
+
+<!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
+    <!-- ko if: widgets().length > 0 -->
+    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1366" class="text-left"><span data-key="1365"><span data-offset-key="1365-0"><span style="color: #ffffff;">Mobile apps</span></span></span></p><p data-key="1368" class="text-left"><span data-key="1367"><span data-offset-key="1367-0"><span style="color: #f8f8f8;">App store</span></span></span></p><p data-key="1370" class="text-left"><span data-key="1369"><span data-offset-key="1369-0"><span style="color: #f8f8f8;">Google play</span></span></span></p><p data-key="1372" class="text-left"><span data-key="1371"><span data-offset-key="1371-0"><span style="color: #f8f8f8;">Windows Store</span></span></span></p><p data-key="1374" class="text-left"><span data-key="1373"><span data-offset-key="1373-0"><span style="color: #f8f8f8;">HTML Application</span></span></span></p></div></div></div></div>
+
+<!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
+    <!-- ko if: widgets().length > 0 -->
+    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1395" class="text-left"><span data-key="1394"><span data-offset-key="1394-0"><span style="color: #ffffff;">Legal</span></span></span></p><p data-key="1397" class="text-left"><span data-key="1396"><span data-offset-key="1396-0"><span style="color: #f8f8f8;">Pricing</span></span></span></p><p data-key="1399" class="text-left"><span data-key="1398"><span data-offset-key="1398-0"><span style="color: #f8f8f8;">Privacy</span></span></span></p><p data-key="1401" class="text-left"><span data-key="1400"><span data-offset-key="1400-0"><span style="color: #f8f8f8;">Terms of use</span></span></span></p></div></div></div></div>
+
+<!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
+    <!-- ko if: widgets().length > 0 -->
+    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1422" class="text-left"><span data-key="1421"><span data-offset-key="1421-0"><span style="color: #ffffff;">Social</span></span></span></p><p data-key="1424" class="text-left"><span data-key="1423"><span data-offset-key="1423-0"><span style="color: #f8f8f8;">Facebook</span></span></span></p><p data-key="1426" class="text-left"><span data-key="1425"><span data-offset-key="1425-0"><span style="color: #f8f8f8;">Twitter</span></span></span></p><p data-key="1428" class="text-left"><span data-key="1427"><span data-offset-key="1427-0"><span style="color: #f8f8f8;">LinkedIn</span></span></span></p></div></div></div></div>
+
+<!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- /ko -->
+</div>
+
+<!-- /ko -->
+        
+        <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko if: widgets().length > 0 -->
+    <!-- ko foreach: { data: widgets, as: 'widget'  } -->
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1449" class="text-center"><span data-key="1448"><span data-offset-key="1448-0"><span style="color: #eef1f2;">© 2017 Hostme LLC. All Rights Reserved.</span></span></span></p></div></div></div></div>
+
+<!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko ifnot: widgets().length > 0 --><!-- /ko -->
+</div><!-- /ko --><!-- /ko -->
+</div>
+
+<!-- /ko -->
+        <!-- /ko -->
+        <!-- ko if: rows().length === 0 --><!-- /ko -->
+    </div>
+</section></div>
+<!-- /ko -->
+<!-- /ko -->
+
+<!-- ko ifnot: widgets().length > 0 --><!-- /ko --></div>
+<!--/ko-->
+
+<!--ko if: working()--><!--/ko--></paper-doc>
+
+    <view-manager></view-manager>
+    <workshops></workshops>
+    <dropbucket></dropbucket>
+    <paper-gtm><!-- Google Tag Manager -->
+<div data-bind="html: gtmBootstrapper"></div>
+<!-- End Google Tag Manager --></paper-gtm>
+    <paper-intercom><!-- Google Tag Manager -->
+<div data-bind="html: intercomBootstrapper"></div>
+<!-- End Google Tag Manager --></paper-intercom>
 
 
-	<!-- SIGN-UP SECTION -->
-	<section id="sign-up" class="sign-up-section text-center" style="padding: 30px 0 100px;">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-
-					<!-- SIGN UP TEXT  -->
-					<h3 class="wow fadeInUp" data-wow-offset="10" data-wow-duration="1.0s">Get it now!</h3>
-					<p class="wow fadeInUp" data-wow-offset="10" data-wow-duration="1.5s" style="font-weight: 400 !important; margin-bottom: 40px">No setup fees. No cover fees. No contract. <br>What are you waiting for?</p>
-					<div class="intro-buttons-77">
-						<a class="btn" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;"
-							href="https://itunes.apple.com/us/app/id1021031770"><i class="fa fa-apple" aria-hidden="true"></i>&nbsp;&nbsp;APP STORE</a>
-						<a class="btn" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;"
-							href="https://play.google.com/store/apps/details?id=com.hostmeapp.hostmepanel"><i class="fa fa-android" aria-hidden="true"></i>&nbsp;&nbsp;GOOGLE PLAY</a>
-						<a class="btn" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;"
-							href="https://www.microsoft.com/store/apps/9nblggh1k8v9"><i class="fa fa-windows" aria-hidden="true"></i>&nbsp;&nbsp;Windows Store</a>
-						<a class="btn" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;"
-							href="/sign-up/"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp;&nbsp;PC / MAC</a>
-					</div>
-					<p class="wow fadeIn" data-wow-offset="10" data-wow-duration="1.5s" data-wow-delay=".3s" style="padding-top: 30px; margin-bottom: 0px; font-size: 14px;">Run HostMe on any tablet, PC or Mac.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- END SIGN-UP SECTION -->
-
-
-	<!-- FOOTER -->
-	<footer class="footer-section">
-		<div class="container">
-			<div class="row">
-
-				<!-- FOOTER WIDGET CONTAINER  -->
-
-				<div class="col-md-12 col-sm-12">
-					<div class="row">
-						<div class="col-md-1 col-sm-1"></div>
-						<div class="col-md-3 col-sm-3">
-							<div class="single-widget">
-								<h4>Quick Links</h4>
-								<ul>
-									<li><a href="/">Home</a></li>
-									<li><a href="/reservations/">Reservations</a></li>
-									<li><a href="/loyalty/">Loyalty</a></li>
-									<li><a href="/about/">About</a></li>
-								</ul>
-							</div>
-						</div>
-						<!-- FOOTER WIDGET CONTAINER  -->
-						<div class="col-md-3 col-sm-3">
-							<div class="single-widget">
-								<h4>Mobile Apps</h4>
-								<ul>
-									<li><a href="https://itunes.apple.com/us/app/id1021031770">App Store</a></li>
-									<li><a href="https://play.google.com/store/apps/details?id=com.hostmeapp.hostmepanel">Google Play</a></li>
-									<li><a href="https://www.microsoft.com/store/apps/9nblggh1k8v9">Windows Store</a></li>
-									<li><a href="/sign-up/">HTML Application</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- FOOTER WIDGET CONTAINER  -->
-						<div class="col-md-3 col-sm-3">
-							<div class="single-widget">
-								<h4>Legal</h4>
-								<ul>
-									<li><a href="/pricing/">Pricing</a></li>
-									<li><a href="/privacy/">Privacy</a></li>
-									<li><a href="/terms/">Terms of use</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- FOOTER WIDGET CONTAINER  -->
-						<div class="col-md-2 col-sm-2">
-							<div class="single-widget">
-								<h4>Social</h4>
-								<ul>
-									<li><a href="http://facebook.com/hostme" target="_blank">Facebook</a></li>
-									<li><a href="http://twitter.com/hostmeapp" target="_blank">Twitter</a></li>
-									<li><a href="https://linkedin.com/company/hostme" target="_blank">Linkedin</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- COPRIGHT CONTAINER  -->
-			<div class="row copyright text-center">
-				<div class="col-md-12">
-					<p>&copy; 2016 Hostme LLC. All Rights Reserved.</p>
-				</div>
-			</div>
-
-		</div>
-	</footer>
-	<!-- END FOOTER -->
-
-
-
-
-	<!--  SCRIPTS  -->
-
-	<!-- JQUERY  -->
-	<script src="/js/vendor/jquery.min.js"></script>
-
-	<!-- MODERNIZR  -->
-	<script src="/js/vendor/modernizr.custom.js"></script>
-
-	<!-- BOOTSTRAP JS  -->
-	<script src="/js/bootstrap.min.js"></script>
-
-	<!-- PRETTYPHOTO JS  -->
-	<script src="/js/jquery.prettyPhoto.js"></script>
-
-	<!-- ONE PAGE NAV JS  -->
-	<script src="/js/jquery.nav.js"></script>
-
-	<!-- SLICK JS  -->
-	<script src="/js/slick.min.js"></script>
-
-	<!-- SCROLL TO TOP JS  -->
-	<script src="/js/jquery.scrollUp.min.js"></script>
-
-	<!-- RETINA JS  -->
-	<script src="/js/retina.js"></script>
-
-	<!-- WOW JS  -->
-	<script src="/js/wow.min.js"></script>
-
-	<!-- CUSTOM JS  -->
-	<script src="/js/scripts.js"></script>-->
-</body>
-
-</html>
+</body></html>

@@ -1,0 +1,64 @@
+<div class="vienna-indicators" data-bind="foreach: progressIndicators">
+    <!--ko if: complete()-->
+    <div class="vienna-indicator">
+        <div class="vienna-indicator-success">
+        </div>
+        <div class="vienna-indicator-text">
+            <h1 data-bind="text: title"></h1>
+            <p data-bind="text: content"></p>
+        </div>
+        <button class="vienna-button-close">✖</button>
+    </div>
+    <!--/ko-->
+    <!--ko if: !complete()-->
+    <div class="vienna-indicator">
+        <div class="vienna-indicator-progress">
+            <spinner></spinner>
+        </div>
+        <div class="vienna-indicator-text">
+            <h1 data-bind="text: title"></h1>
+            <p data-bind="text: content"></p>
+        </div>
+        <button class="vienna-button-close">✖</button>
+    </div>
+    <!--/ko-->
+</div>
+
+<!-- ko with: widgetEditor() -->
+<div class="surface vienna-toolbox" data-bind="surface: {}">
+    <!-- ko if: !hideCloseButton -->
+    <a href="#" class="vienna-button-close" data-bind="click: $component.closeWidgetEditor">&#10006;</a>
+    <!-- /ko -->
+    <div data-bind="component: { name: component.name, params: component.params, oncreate: component.oncreate }"></div>
+</div>
+<!-- /ko -->
+
+<!-- ko foreach: { data: contextualEditors, as: 'contextualEditor' } -->
+
+
+<div class="fixed" data-bind="stickTo: { target: contextualEditor.element, position: 'top right' }">
+    <!-- ko if: contextualEditor.settingsCallback -->
+    <button class="vienna-button-standalone vienna-icon vienna-icon-pen" data-bind="click: contextualEditor.settingsCallback, background: { color: contextualEditor.color }, attr: { title: contextualEditor.settingsTooltip }"></button>
+    <!-- /ko -->
+
+    <!-- ko if: contextualEditor.deleteCallback -->
+    <button class="vienna-button-standalone vienna-icon vienna-icon-trash-inverted" data-bind="click: contextualEditor.deleteCallback, background: { color: contextualEditor.color }, attr: { title: contextualEditor.deleteTooltip }"></button>
+    <!-- /ko -->
+</div>
+
+
+<button class="fixed vienna-button-standalone vienna-icon vienna-icon-plus-inverted" data-bind="stickTo: { target: contextualEditor.element, position: contextualEditor.position }, balloon: { target: '#ce-'+contextualEditor.component.name, position: 'top' }, background: { color: contextualEditor.color }, attr: { title: contextualEditor.addTooltip }"></button>
+
+<div class="vienna-balloon" data-bind="attr: { id: 'ce-'+contextualEditor.component.name }">
+    <div data-bind="component: contextualEditor.component"></div>
+</div>
+
+<!-- /ko -->
+
+<!-- ko if: highlightedElement() -->
+<div class="layout-editor-selection" data-bind="highlight: highlightedElement"></div>
+<!-- /ko -->
+
+<!-- ko if: selectedElement() -->
+<div class="layout-editor-selection" data-bind="highlight: selectedElement"></div>
+<!-- /ko -->

@@ -1,0 +1,23 @@
+<!--ko if: working()-->
+<spinner></spinner>
+<!--/ko-->
+
+<div class="flex-container flex-container-column fit">
+    <fieldset class="flex-item vienna-form">
+        <input class="vienna-control-textbox" type="search" data-bind="value: searchPattern, valueUpdate: 'keyup'" placeholder="Search media..."
+        />
+    </fieldset>
+
+    <ul class="flex-item flex-item-grow vienna-list" data-bind="foreach: mediaItems, scrollable: {}">
+        <li class="vienna-list-item vienna-icon vienna-icon-image" data-bind="css: { selected: hasFocus }, dragsource: { sticky: true, payload: $data, ondragstart: $parent.onDragStart, ondragend: $parent.onDragEnd }">
+            <a href="#" data-bind="text: media.filename, click: $component.selectMedia, hasFocus: hasFocus, event: { keydown: $component.keydown }"></a>
+        </li>
+    </ul>
+
+    <div class="flex-item vienna-button-group">
+        <button class="vienna-button" data-bind="click: uploadMedia"><span class="vienna-icon vienna-icon-uploadmedia">Upload file</span></button>
+        <!--ko if: selectedMediaItem -->
+        <button class="vienna-button" data-bind="click: deleteMedia"><span class="vienna-icon vienna-icon-minus">Delete file</span></button>
+        <!--/ko-->
+    </div>
+</div>

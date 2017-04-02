@@ -1,0 +1,23 @@
+<div class="flex-container flex-container-column fit">
+    <fieldset class="flex-item flex-item-grow vienna-form" data-bind="scrollable: {}">
+        <label><span class="help"></span>Title</label>
+        <input type="text" class="vienna-control-textbox" data-bind="textInput: newsElementItem.title" placeholder="i.e. Orders"
+        />
+
+        <label><span class="help"></span>Permalink</label>
+        <input type="text" class="vienna-control-textbox" data-bind="textInput: newsElementItem.permalinkUrl" placeholder="http://www.site.com/"
+        />
+
+        <label><span class="help"></span>Description</label>
+        <input type="text" class="vienna-control-textbox" data-bind="textInput: newsElementItem.description" />
+
+        <label><span class="help"></span>Keywords</label>
+        <input type="text" class="vienna-control-textbox" data-bind="textInput: newsElementItem.keywords" />
+    </fieldset>
+
+    <div class="flex-item vienna-button-group">
+        <button class="vienna-button">
+            <span class="vienna-icon vienna-icon-minus" data-bind="click: deleteNewsElement">Delete article</span>
+        </button>
+    </div>
+</div>

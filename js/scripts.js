@@ -173,7 +173,7 @@ $("#signup-form").submit(function(e) {
         //ga('send', 'event', 'button', 'click', 'signup', 1);
 
         if (email.length > 1 && (name.length > 1)) {
-            window.location.replace("https://panel.hostmeapp.com/#/pages/signup?" + dataString);
+            window.location.replace("http://panel.hostmeapp.com/#/signup?" + dataString);
         } else {
             $('.email-error').fadeIn(1000);
             $('.email-success').fadeOut(500);

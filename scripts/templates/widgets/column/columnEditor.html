@@ -1,0 +1,29 @@
+<div class="vienna-editor">
+    <h1>
+        Column
+    </h1>
+    <hr />
+    <fieldset class="vienna-form" data-bind="scrollable: {}">
+        <div class="vienna-form-group">
+            <label><span class="help"></span>Content alignment</label>
+            <table class="background-alignment">
+                <tr>
+                    <td><button class="vienna-icon vienna-icon-arrow-up-left" data-bind="click: alignContent.bind($component, 'top start')"></button></td>
+                    <td><button class="vienna-icon vienna-icon-arrow-up" data-bind="click: alignContent.bind($component, 'top center')"></button></td>
+                    <td><button class="vienna-icon vienna-icon-arrow-up-right" data-bind="click: alignContent.bind($component, 'top end')"></button></td>
+                </tr>
+                <tr>
+                    <td><button class="vienna-icon vienna-icon-arrow-left" data-bind="click: alignContent.bind($component, 'middle start')"></button></td>
+                    <td><button class="vienna-icon vienna-icon-arrow-center" data-bind="click: alignContent.bind($component, 'middle center')"></button></td>
+                    <td><button class="vienna-icon vienna-icon-arrow-right" data-bind="click: alignContent.bind($component, 'middle end')"></button></td>
+                </tr>
+                <tr>
+                    <td><button class="vienna-icon vienna-icon-arrow-down-left" data-bind="click: alignContent.bind($component, 'bottom start')"></button></td>
+                    <td><button class="vienna-icon vienna-icon-arrow-down" data-bind="click: alignContent.bind($component, 'bottom center')"></button></td>
+                    <td><button class="vienna-icon vienna-icon-arrow-down-right" data-bind="click: alignContent.bind($component, 'bottom end')"></button></td>
+                </tr>
+            </table>
+        </div>
+        <!-- /ko -->
+    </fieldset>
+</div>

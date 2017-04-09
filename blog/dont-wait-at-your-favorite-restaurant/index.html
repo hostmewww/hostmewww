@@ -34,7 +34,8 @@
     <link rel="stylesheet" href="/css/slick.css">
 
     <!-- BOOTSTRAP CSS  -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
     <!-- ON SCROLL ANIMATION CSS  -->
     <link rel="stylesheet" href="/css/animate.min.css">
@@ -71,7 +72,7 @@
     <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
         <!-- ko foreach: { data: rows, as: 'row' } -->
         <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
-    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-3 middle-sm start-sm middle-md start-md middle-lg start-lg">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-3 align-items-xs-center justify-content-xs-start align-items-sm-center justify-content-sm-start align-items-md-center justify-content-md-start align-items-xl-center justify-content-xl-start align-items-lg-center justify-content-lg-start">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
     <!-- ko widgetH: widget --><div class="picture noframe" data-bind="css: css, widget: {}">
@@ -87,76 +88,109 @@
     <!-- /ko -->
 
     <!-- ko if: widgets().length === 0 --><!-- /ko -->
-</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-9 middle-sm end-sm middle-md end-md middle-lg end-lg">
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-9 align-items-xs-center justify-content-xs-end align-items-sm-center justify-content-sm-end align-items-md-center justify-content-md-end align-items-xl-center justify-content-xl-end align-items-lg-center justify-content-lg-end">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><nav class="navbar navbar-default navbar-collapse" data-bind="with: root(), widget: {}">
-    <ul class="nav navbar-nav navbar-right" data-bind="foreach: nodes(), css: { 'navbar-right': $component.alignRight }">
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/">Home</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/pricing">Pricing</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/about">About</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/blog">Blog</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/news">News</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="https://help.hostmeapp.com">Help</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="https://panel.hostmeapp.com">Sign In</a>
-        </li>
-        <!--/ko-->
+    <!-- ko widgetH: widget --><!--<nav class="navbar navbar-toggleable navbar-light">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
     </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>-->
+
+
+
+<nav class="navbar navbar-toggleable navbar-light" data-bind="with: root(), widget: {}">
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav" data-bind="foreach: nodes()">
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="/">Home</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="/pricing">Pricing</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="/about">About</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="/blog">Blog</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="/news">News</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="https://help.hostmeapp.com">Help</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="https://panel.hostmeapp.com">Sign In</a>
+            </li>
+            <!--/ko-->
+        </ul>
+    </div>
 </nav>
 
 <script id="navigationItemTemplate" type="text/html">
     <ul class="dropdown-menu" data-bind="foreach: nodes()">
         <!--ko if: nodes().length > 0 -->
         <li class="dropdown dropdown-submenu">
-            <a class="dropdown-toggle" data-toggle="dropdown" data-bind="attr: { href: url }">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-bind="attr: { href: url }">
                 <span data-bind="text: label"></span>
                 <!--<span class="caret"></span>-->
             </a>
-            <!--ko template: { name: 'ttt', data: $data }--><!--/ko-->
+            <!--ko template: { name: 'ttt', data: $data }-->
+            <!--/ko-->
         </li>
         <!--/ko-->
         <!--ko ifnot: nodes().length > 0 -->
         <li>
-            <a data-bind="text: label, attr: { href: url }"></a>
+            <a class="nav-link" data-bind="text: label, attr: { href: url }"></a>
         </li>
         <!--/ko-->
     </ul>
@@ -183,10 +217,10 @@
     <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
         <!-- ko foreach: { data: rows, as: 'row' } -->
         <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
-    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 align-items-xs-center justify-content-xs-center align-items-sm-center justify-content-sm-center align-items-md-center justify-content-md-center align-items-xl-center justify-content-xl-center align-items-lg-center justify-content-lg-center">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1160" class="text-center"><span data-key="1159"><span data-offset-key="1159-0"><span style="color: #fff;">Hostme Blog</span></span></span></p><h2 data-key="1162" class="text-center"><span data-key="1161"><span data-offset-key="1161-0"><span style="color: #fff;">Don't wait at your favorite restaurant ever again!</span></span></span></h2></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1160"><span data-key="1159"><span data-offset-key="1159-0">Hostme Blog</span></span></p><h2 data-key="1162"><span data-key="1161"><span data-offset-key="1161-0">Don't wait at your favorite restaurant ever again!</span></span></h2></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
@@ -207,19 +241,19 @@
     <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
         <!-- ko foreach: { data: rows, as: 'row' } -->
         <!-- ko widgetH: row --><div class="row center-md" data-bind="css: css, layoutrow: {}">
-    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 align-items-xs-center justify-content-xs-center align-items-sm-center justify-content-sm-center align-items-md-center justify-content-md-center align-items-xl-center justify-content-xl-center align-items-lg-center justify-content-lg-center">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1183" class="text-left"><span data-key="1182"><span data-offset-key="1182-0">We all have been in a situation where we are unable to make a reservation at our favorite restaurant because OpenTable reservation system shows that all tables are already booked. Plus, we know that our preferred dining place is always busy and have no desire to stay in line or wait outside. Sure, we can always go to another place where we are able to book a table, but, as patrons, those experiences are especially exasperating. Now, try to imagine the restaurant owner's frustration when this happens and the restaurant is actually not that busy.</span></span></p><p data-key="1185" class="text-left"><span data-key="1184"><span data-offset-key="1184-0"></span></span></p><p data-key="1187" class="text-left"><span data-key="1186"><span data-offset-key="1186-0">That's why we created the innovative Hostme wait-line management system. Hostme is an elegant solution for that exact problem - by combining restaurant's reservation system with their wait line management system, patrons can avoid long lines at their favorite restaurants. So, for instance, if a reservation is not available at their restaurant and all dedicated reservation tables are booked, patrons can put their names on the walk-in list in advance. This will ensure that when they arrive, they will be first in line for a table. This mechanism allows patrons to escape long lines and restaurants to fill out their tables more effectively.</span></span></p><p data-key="1189" class="text-left"><span data-key="1188"><span data-offset-key="1188-0"></span></span></p><p data-key="1191" class="text-left"><span data-key="1190"><span data-offset-key="1190-0">At this time, Hostme is the only vendor to offer this hybrid solution to restaurant's owners. This solution can be set up on its own or in combination with the OpenTable system already in place. We offer tailored programs to fit the specific needs of restaurants. Pick one of our preset programs or contact us for a custom one:</span></span></p><p data-key="1193" class="text-left"><span data-key="1192"><span data-offset-key="1192-0"></span></span></p><p data-key="1195" class="text-left"><span data-key="1194"><span data-offset-key="1194-0">I am OpenTable customer and:</span></span></p><p data-key="1198" class="text-left"><span data-key="1216"><span data-offset-key="1216-0"><span data-slate-zero-width="true">
-</span></span></span><a href="http://www.hostmeapp.com/sign-up?program=cut-ot-cost" data-key="1197"><span data-key="1196"><span data-offset-key="1196-0">I want to cut my OpenTable costs</span></span></a><span data-key="1217"><span data-offset-key="1217-0"><span data-slate-zero-width="true">
-</span></span></span></p><p data-key="1201" class="text-left"><span data-key="1218"><span data-offset-key="1218-0"><span data-slate-zero-width="true">
-</span></span></span><a href="http://www.hostmeapp.com/sign-up?program=maximize-table-turnover" data-key="1200"><span data-key="1199"><span data-offset-key="1199-0">I want to maximize number of table turns with Hostme "Hybrid" reservation mode</span></span></a><span data-key="1219"><span data-offset-key="1219-0"><span data-slate-zero-width="true">
-</span></span></span></p><p data-key="1204" class="text-left"><span data-key="1220"><span data-offset-key="1220-0"><span data-slate-zero-width="true">
-</span></span></span><a href="http://www.hostmeapp.com/sign-up?program=get-in-line" data-key="1203"><span data-key="1202"><span data-offset-key="1202-0">I want to use Hostme to manage walk-in traffic and enable "get in line on a fly" service</span></span></a><span data-key="1221"><span data-offset-key="1221-0"><span data-slate-zero-width="true">
-</span></span></span></p><p data-key="1206" class="text-left"><span data-key="1205"><span data-offset-key="1205-0"></span></span></p><p data-key="1208" class="text-left"><span data-key="1207"><span data-offset-key="1207-0">I am not OpenTable customer:</span></span></p><p data-key="1211" class="text-left"><span data-key="1222"><span data-offset-key="1222-0"><span data-slate-zero-width="true">
-</span></span></span><a href="http://www.hostmeapp.com/sign-up?program=new-reservations" data-key="1210"><span data-key="1209"><span data-offset-key="1209-0">I would like to offer reservations to my guests</span></span></a><span data-key="1223"><span data-offset-key="1223-0"><span data-slate-zero-width="true">
-</span></span></span></p><p data-key="1214" class="text-left"><span data-key="1224"><span data-offset-key="1224-0"><span data-slate-zero-width="true">
-</span></span></span><a href="http://www.hostmeapp.com/sign-up?program=new-walkins" data-key="1213"><span data-key="1212"><span data-offset-key="1212-0">I want to use Hostme to manage our walk-ins</span></span></a><span data-key="1225"><span data-offset-key="1225-0"><span data-slate-zero-width="true">
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1183"><span data-key="1182"><span data-offset-key="1182-0">We all have been in a situation where we are unable to make a reservation at our favorite restaurant because OpenTable reservation system shows that all tables are already booked. Plus, we know that our preferred dining place is always busy and have no desire to stay in line or wait outside. Sure, we can always go to another place where we are able to book a table, but, as patrons, those experiences are especially exasperating. Now, try to imagine the restaurant owner's frustration when this happens and the restaurant is actually not that busy.</span></span></p><p data-key="1185"><span data-key="1184"><span data-offset-key="1184-0"></span></span></p><p data-key="1187"><span data-key="1186"><span data-offset-key="1186-0">That's why we created the innovative Hostme wait-line management system. Hostme is an elegant solution for that exact problem - by combining restaurant's reservation system with their wait line management system, patrons can avoid long lines at their favorite restaurants. So, for instance, if a reservation is not available at their restaurant and all dedicated reservation tables are booked, patrons can put their names on the walk-in list in advance. This will ensure that when they arrive, they will be first in line for a table. This mechanism allows patrons to escape long lines and restaurants to fill out their tables more effectively.</span></span></p><p data-key="1189"><span data-key="1188"><span data-offset-key="1188-0"></span></span></p><p data-key="1191"><span data-key="1190"><span data-offset-key="1190-0">At this time, Hostme is the only vendor to offer this hybrid solution to restaurant's owners. This solution can be set up on its own or in combination with the OpenTable system already in place. We offer tailored programs to fit the specific needs of restaurants. Pick one of our preset programs or contact us for a custom one:</span></span></p><p data-key="1193"><span data-key="1192"><span data-offset-key="1192-0"></span></span></p><p data-key="1195"><span data-key="1194"><span data-offset-key="1194-0">I am OpenTable customer and:</span></span></p><p data-key="1198"><span data-key="1216"><span data-offset-key="1216-0"><span data-slate-zero-width="true">
+</span></span></span><a data-key="1197" href="http://www.hostmeapp.com/sign-up?program=cut-ot-cost"><span data-key="1196"><span data-offset-key="1196-0">I want to cut my OpenTable costs</span></span></a><span data-key="1217"><span data-offset-key="1217-0"><span data-slate-zero-width="true">
+</span></span></span></p><p data-key="1201"><span data-key="1218"><span data-offset-key="1218-0"><span data-slate-zero-width="true">
+</span></span></span><a data-key="1200" href="http://www.hostmeapp.com/sign-up?program=maximize-table-turnover"><span data-key="1199"><span data-offset-key="1199-0">I want to maximize number of table turns with Hostme "Hybrid" reservation mode</span></span></a><span data-key="1219"><span data-offset-key="1219-0"><span data-slate-zero-width="true">
+</span></span></span></p><p data-key="1204"><span data-key="1220"><span data-offset-key="1220-0"><span data-slate-zero-width="true">
+</span></span></span><a data-key="1203" href="http://www.hostmeapp.com/sign-up?program=get-in-line"><span data-key="1202"><span data-offset-key="1202-0">I want to use Hostme to manage walk-in traffic and enable "get in line on a fly" service</span></span></a><span data-key="1221"><span data-offset-key="1221-0"><span data-slate-zero-width="true">
+</span></span></span></p><p data-key="1206"><span data-key="1205"><span data-offset-key="1205-0"></span></span></p><p data-key="1208"><span data-key="1207"><span data-offset-key="1207-0">I am not OpenTable customer:</span></span></p><p data-key="1211"><span data-key="1222"><span data-offset-key="1222-0"><span data-slate-zero-width="true">
+</span></span></span><a data-key="1210" href="http://www.hostmeapp.com/sign-up?program=new-reservations"><span data-key="1209"><span data-offset-key="1209-0">I would like to offer reservations to my guests</span></span></a><span data-key="1223"><span data-offset-key="1223-0"><span data-slate-zero-width="true">
+</span></span></span></p><p data-key="1214"><span data-key="1224"><span data-offset-key="1224-0"><span data-slate-zero-width="true">
+</span></span></span><a data-key="1213" href="http://www.hostmeapp.com/sign-up?program=new-walkins"><span data-key="1212"><span data-offset-key="1212-0">I want to use Hostme to manage our walk-ins</span></span></a><span data-key="1225"><span data-offset-key="1225-0"><span data-slate-zero-width="true">
 </span></span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
@@ -244,10 +278,10 @@
     <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
         <!-- ko foreach: { data: rows, as: 'row' } -->
         <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
-    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 align-items-xs-center justify-content-xs-center align-items-sm-center justify-content-sm-center align-items-md-center justify-content-md-center align-items-xl-center justify-content-xl-center align-items-lg-center justify-content-lg-center">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h2 data-key="1002" class="text-center"><span data-key="1001"><span data-offset-key="1001-0"><span style="color: #ffffff;">Get it now!</span></span></span></h2><p data-key="1004" class="text-center"><span data-key="1003"><span data-offset-key="1003-0"><span style="color: #ffffff;">No setup fees. No cover fees. No contract.</span></span></span></p><p data-key="1006" class="text-center"><span data-key="1005"><span data-offset-key="1005-0"><span style="color: #ffffff;">What are you waiting for?</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h2 data-key="1002"><span data-key="1001"><span data-offset-key="1001-0">Get it now!</span></span></h2><p data-key="1004"><span data-key="1003"><span data-offset-key="1003-0">No setup fees. No cover fees. No contract.</span></span></p><p data-key="1006"><span data-key="1005"><span data-offset-key="1005-0">What are you waiting for?</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
@@ -276,40 +310,40 @@
     <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
         <!-- ko foreach: { data: rows, as: 'row' } -->
         <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
-    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-3 align-items-xs-start justify-content-xs-start align-items-sm-start justify-content-sm-start align-items-md-start justify-content-md-start align-items-xl-start justify-content-xl-start align-items-lg-start justify-content-lg-start">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1027" class="text-left"><span data-key="1026"><span data-offset-key="1026-0"><span style="color: #ffffff;">Quick links</span></span></span></p><p data-key="1029" class="text-left"><span data-key="1028"><span data-offset-key="1028-0"><span style="color: #f8f8f8;">Home</span></span></span></p><p data-key="1031" class="text-left"><span data-key="1030"><span data-offset-key="1030-0"><span style="color: #f8f8f8;">Reservations</span></span></span></p><p data-key="1033" class="text-left"><span data-key="1032"><span data-offset-key="1032-0"><span style="color: #f8f8f8;">Loyalty</span></span></span></p><p data-key="1035" class="text-left"><span data-key="1034"><span data-offset-key="1034-0"><span style="color: #f8f8f8;">About</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1027"><span data-key="1026"><span data-offset-key="1026-0">Quick links</span></span></p><p data-key="1029"><span data-key="1028"><span data-offset-key="1028-0">Home</span></span></p><p data-key="1031"><span data-key="1030"><span data-offset-key="1030-0">Reservations</span></span></p><p data-key="1033"><span data-key="1032"><span data-offset-key="1032-0">Loyalty</span></span></p><p data-key="1035"><span data-key="1034"><span data-offset-key="1034-0">About</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
     <!-- ko if: widgets().length === 0 --><!-- /ko -->
-</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 align-items-xs-start justify-content-xs-start align-items-sm-start justify-content-sm-start align-items-md-start justify-content-md-start align-items-xl-start justify-content-xl-start align-items-lg-start justify-content-lg-start">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1056" class="text-left"><span data-key="1055"><span data-offset-key="1055-0"><span style="color: #ffffff;">Mobile apps</span></span></span></p><p data-key="1058" class="text-left"><span data-key="1057"><span data-offset-key="1057-0"><span style="color: #f8f8f8;">App store</span></span></span></p><p data-key="1060" class="text-left"><span data-key="1059"><span data-offset-key="1059-0"><span style="color: #f8f8f8;">Google play</span></span></span></p><p data-key="1062" class="text-left"><span data-key="1061"><span data-offset-key="1061-0"><span style="color: #f8f8f8;">Windows Store</span></span></span></p><p data-key="1064" class="text-left"><span data-key="1063"><span data-offset-key="1063-0"><span style="color: #f8f8f8;">HTML Application</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1056"><span data-key="1055"><span data-offset-key="1055-0">Mobile apps</span></span></p><p data-key="1058"><span data-key="1057"><span data-offset-key="1057-0">App store</span></span></p><p data-key="1060"><span data-key="1059"><span data-offset-key="1059-0">Google play</span></span></p><p data-key="1062"><span data-key="1061"><span data-offset-key="1061-0">Windows Store</span></span></p><p data-key="1064"><span data-key="1063"><span data-offset-key="1063-0">HTML Application</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
     <!-- ko if: widgets().length === 0 --><!-- /ko -->
-</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 align-items-xs-start justify-content-xs-start align-items-sm-start justify-content-sm-start align-items-md-start justify-content-md-start align-items-xl-start justify-content-xl-start align-items-lg-start justify-content-lg-start">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1085" class="text-left"><span data-key="1084"><span data-offset-key="1084-0"><span style="color: #ffffff;">Legal</span></span></span></p><p data-key="1087" class="text-left"><span data-key="1086"><span data-offset-key="1086-0"><span style="color: #f8f8f8;">Pricing</span></span></span></p><p data-key="1089" class="text-left"><span data-key="1088"><span data-offset-key="1088-0"><span style="color: #f8f8f8;">Privacy</span></span></span></p><p data-key="1091" class="text-left"><span data-key="1090"><span data-offset-key="1090-0"><span style="color: #f8f8f8;">Terms of use</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1085"><span data-key="1084"><span data-offset-key="1084-0">Legal</span></span></p><p data-key="1087"><span data-key="1086"><span data-offset-key="1086-0">Pricing</span></span></p><p data-key="1089"><span data-key="1088"><span data-offset-key="1088-0">Privacy</span></span></p><p data-key="1091"><span data-key="1090"><span data-offset-key="1090-0">Terms of use</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
     <!-- ko if: widgets().length === 0 --><!-- /ko -->
-</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 align-items-xs-start justify-content-xs-start align-items-sm-start justify-content-sm-start align-items-md-start justify-content-md-start align-items-xl-start justify-content-xl-start align-items-lg-start justify-content-lg-start">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1112" class="text-left"><span data-key="1111"><span data-offset-key="1111-0"><span style="color: #ffffff;">Social</span></span></span></p><p data-key="1114" class="text-left"><span data-key="1113"><span data-offset-key="1113-0"><span style="color: #f8f8f8;">Facebook</span></span></span></p><p data-key="1116" class="text-left"><span data-key="1115"><span data-offset-key="1115-0"><span style="color: #f8f8f8;">Twitter</span></span></span></p><p data-key="1118" class="text-left"><span data-key="1117"><span data-offset-key="1117-0"><span style="color: #f8f8f8;">LinkedIn</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1112"><span data-key="1111"><span data-offset-key="1111-0">Social</span></span></p><p data-key="1114"><span data-key="1113"><span data-offset-key="1113-0">Facebook</span></span></p><p data-key="1116"><span data-key="1115"><span data-offset-key="1115-0">Twitter</span></span></p><p data-key="1118"><span data-key="1117"><span data-offset-key="1117-0">LinkedIn</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
@@ -323,10 +357,10 @@
 <!-- /ko -->
         
         <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
-    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 align-items-xs-center justify-content-xs-center align-items-sm-center justify-content-sm-center align-items-md-center justify-content-md-center align-items-xl-center justify-content-xl-center align-items-lg-center justify-content-lg-center">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1139" class="text-center"><span data-key="1138"><span data-offset-key="1138-0"><span style="color: #eef1f2;">© 2017 Hostme LLC. All Rights Reserved.</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1139"><span data-key="1138"><span data-offset-key="1138-0">© 2017 Hostme LLC. All Rights Reserved.</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->

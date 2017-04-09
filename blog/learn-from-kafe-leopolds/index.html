@@ -34,7 +34,8 @@
     <link rel="stylesheet" href="/css/slick.css">
 
     <!-- BOOTSTRAP CSS  -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
     <!-- ON SCROLL ANIMATION CSS  -->
     <link rel="stylesheet" href="/css/animate.min.css">
@@ -71,7 +72,7 @@
     <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
         <!-- ko foreach: { data: rows, as: 'row' } -->
         <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
-    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-3 middle-sm start-sm middle-md start-md middle-lg start-lg">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-3 align-items-xs-center justify-content-xs-start align-items-sm-center justify-content-sm-start align-items-md-center justify-content-md-start align-items-xl-center justify-content-xl-start align-items-lg-center justify-content-lg-start">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
     <!-- ko widgetH: widget --><div class="picture noframe" data-bind="css: css, widget: {}">
@@ -87,76 +88,109 @@
     <!-- /ko -->
 
     <!-- ko if: widgets().length === 0 --><!-- /ko -->
-</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-9 middle-sm end-sm middle-md end-md middle-lg end-lg">
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-9 align-items-xs-center justify-content-xs-end align-items-sm-center justify-content-sm-end align-items-md-center justify-content-md-end align-items-xl-center justify-content-xl-end align-items-lg-center justify-content-lg-end">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><nav class="navbar navbar-default navbar-collapse" data-bind="with: root(), widget: {}">
-    <ul class="nav navbar-nav navbar-right" data-bind="foreach: nodes(), css: { 'navbar-right': $component.alignRight }">
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/">Home</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/pricing">Pricing</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/about">About</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/blog">Blog</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/news">News</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="https://help.hostmeapp.com">Help</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="https://panel.hostmeapp.com">Sign In</a>
-        </li>
-        <!--/ko-->
+    <!-- ko widgetH: widget --><!--<nav class="navbar navbar-toggleable navbar-light">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
     </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>-->
+
+
+
+<nav class="navbar navbar-toggleable navbar-light" data-bind="with: root(), widget: {}">
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav" data-bind="foreach: nodes()">
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="/">Home</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="/pricing">Pricing</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="/about">About</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="/blog">Blog</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="/news">News</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="https://help.hostmeapp.com">Help</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="https://panel.hostmeapp.com">Sign In</a>
+            </li>
+            <!--/ko-->
+        </ul>
+    </div>
 </nav>
 
 <script id="navigationItemTemplate" type="text/html">
     <ul class="dropdown-menu" data-bind="foreach: nodes()">
         <!--ko if: nodes().length > 0 -->
         <li class="dropdown dropdown-submenu">
-            <a class="dropdown-toggle" data-toggle="dropdown" data-bind="attr: { href: url }">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-bind="attr: { href: url }">
                 <span data-bind="text: label"></span>
                 <!--<span class="caret"></span>-->
             </a>
-            <!--ko template: { name: 'ttt', data: $data }--><!--/ko-->
+            <!--ko template: { name: 'ttt', data: $data }-->
+            <!--/ko-->
         </li>
         <!--/ko-->
         <!--ko ifnot: nodes().length > 0 -->
         <li>
-            <a data-bind="text: label, attr: { href: url }"></a>
+            <a class="nav-link" data-bind="text: label, attr: { href: url }"></a>
         </li>
         <!--/ko-->
     </ul>
@@ -183,10 +217,10 @@
     <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
         <!-- ko foreach: { data: rows, as: 'row' } -->
         <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
-    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 align-items-xs-center justify-content-xs-center align-items-sm-center justify-content-sm-center align-items-md-center justify-content-md-center align-items-xl-center justify-content-xl-center align-items-lg-center justify-content-lg-center">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1956" class="text-center"><span data-key="1955"><span data-offset-key="1955-0"><span style="color: #fff;">Hostme Blog</span></span></span></p><h2 data-key="1958" class="text-center"><span data-key="1957"><span data-offset-key="1957-0"><span style="color: #fff;">Learn from Kafe Leopolds how to manage crowd in popular places</span></span></span></h2></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1956"><span data-key="1955"><span data-offset-key="1955-0">Hostme Blog</span></span></p><h2 data-key="1958"><span data-key="1957"><span data-offset-key="1957-0">Learn from Kafe Leopolds how to manage crowd in popular places</span></span></h2></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
@@ -207,10 +241,10 @@
     <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
         <!-- ko foreach: { data: rows, as: 'row' } -->
         <!-- ko widgetH: row --><div class="row center-md" data-bind="css: css, layoutrow: {}">
-    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 align-items-xs-center justify-content-xs-center align-items-sm-center justify-content-sm-center align-items-md-center justify-content-md-center align-items-xl-center justify-content-xl-center align-items-lg-center justify-content-lg-center">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1979" class="text-left"><span data-key="1978"><span data-offset-key="1978-0">Washington, D.C. is home to hundreds of brunch, lunch, and dinner spots. While each establishment has crafted its own menu and created its signature dishes and drinks, they all have one thing in common: crowds.</span></span></p><p data-key="1981" class="text-left"><span data-key="1980"><span data-offset-key="1980-0"></span></span></p><p data-key="1983" class="text-left"><span data-key="1982"><span data-offset-key="1982-0">If you're going out in the District, you're going to wait for a table. It's something that Washingtonians have come to accept - but that doesn't mean they won't reward businesses that make wait times a little more enjoyable.</span></span></p><p data-key="1985" class="text-left"><span data-key="1984"><span data-offset-key="1984-0"></span></span></p><p data-key="1993" class="text-left"><span data-key="1986"><span data-offset-key="1986-0">The people behind </span></span><a href="http://kafeleopold.com/" data-key="1988"><span data-key="1987"><span data-offset-key="1987-0">Leopold's Kafe &amp; Konditorei</span></span></a><span data-key="1989"><span data-offset-key="1989-0"> know a thing or two about managing a crowd. Tucked away in historic Georgetown, the Kafe is one of the neighborhood's most sought after brunch destinations. After years of struggling to keep up with demand, the team adopted </span></span><a href="http://hostmeapp.com/" data-key="1991"><span data-key="1990"><span data-offset-key="1990-0">Hostme</span></span></a><span data-key="1992"><span data-offset-key="1992-0">, a modern, customizable front-of-house system that allows restaurants to manage their wait list, reservation system, and loyalty programs from one central hub.</span></span></p><p data-key="1995" class="text-left"><span data-key="1994"><span data-offset-key="1994-0"></span></span></p><p data-key="2000" class="text-left"><span data-key="1996"><span data-offset-key="1996-0">Before they made the switch to </span></span><a href="http://hostmeapp.com/" data-key="1998"><span data-key="1997"><span data-offset-key="1997-0">Hostme</span></span></a><span data-key="1999"><span data-offset-key="1999-0">, Leopold's Kafe &amp; Konditorei's staff was left to manage large crowds that were effectively tethered to the entrance of the restaurant. This proved awkward for patrons who were already seated, and frustrating for those who had nothing to do but wait. Chantelle Malcher, manager of Leopold's Kafe, says that the complete Hostme system helped her staff better handle the popular restaurant's rapidly growing customer base.</span></span></p><p data-key="2002" class="text-left"><span data-key="2001"><span data-offset-key="2001-0"></span></span></p><p data-key="2007" class="text-left"><span data-key="2003"><span data-offset-key="2003-0">"The pressure was high, and people got impatient," she said last month. "After switching to </span></span><a href="http://hostmeapp.com/" data-key="2005"><span data-key="2004"><span data-offset-key="2004-0">Hostme</span></span></a><span data-key="2006"><span data-offset-key="2006-0">, we still maintain a long wait list, but our customers aren't forced to stand around and wait for their table. They can explore Georgetown, and come back when they get the notification that their table is ready. The app is easy to use for both my staff and our patrons, making it easier for us to turn tables and reduce wait time."</span></span></p><p data-key="2009" class="text-left"><span data-key="2008"><span data-offset-key="2008-0"></span></span></p><p data-key="2011" class="text-left"><span data-key="2010"><span data-offset-key="2010-0">With the touch of a button, Chantelle and her team are able to communicate with their guests every step of the way via text message or mobile app notifications, eliminating the need for both out of date pagers and awkward searches for the next party to be seated.</span></span></p><p data-key="2013" class="text-left"><span data-key="2012"><span data-offset-key="2012-0"></span></span></p><p data-key="2018" class="text-left"><span data-key="2014"><span data-offset-key="2014-0">"We're excited to truly bring restaurant management into the digital era," said </span></span><a href="http://hostmeapp.com/" data-key="2016"><span data-key="2015"><span data-offset-key="2015-0">Hostme, LLC</span></span></a><span data-key="2017"><span data-offset-key="2017-0"> co-founder Evgeny Popov. "Where other vendors have stopped short of full integration, the Hostme system offers restaurateurs the opportunity to improve front-of-house operations by transitioning the business away from cumbersome pager systems and toward a tablet- and app-based experience."</span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1979"><span data-key="1978"><span data-offset-key="1978-0">Washington, D.C. is home to hundreds of brunch, lunch, and dinner spots. While each establishment has crafted its own menu and created its signature dishes and drinks, they all have one thing in common: crowds.</span></span></p><p data-key="1981"><span data-key="1980"><span data-offset-key="1980-0"></span></span></p><p data-key="1983"><span data-key="1982"><span data-offset-key="1982-0">If you're going out in the District, you're going to wait for a table. It's something that Washingtonians have come to accept - but that doesn't mean they won't reward businesses that make wait times a little more enjoyable.</span></span></p><p data-key="1985"><span data-key="1984"><span data-offset-key="1984-0"></span></span></p><p data-key="1993"><span data-key="1986"><span data-offset-key="1986-0">The people behind </span></span><a data-key="1988" href="http://kafeleopold.com/"><span data-key="1987"><span data-offset-key="1987-0">Leopold's Kafe &amp; Konditorei</span></span></a><span data-key="1989"><span data-offset-key="1989-0"> know a thing or two about managing a crowd. Tucked away in historic Georgetown, the Kafe is one of the neighborhood's most sought after brunch destinations. After years of struggling to keep up with demand, the team adopted </span></span><a data-key="1991" href="http://hostmeapp.com/"><span data-key="1990"><span data-offset-key="1990-0">Hostme</span></span></a><span data-key="1992"><span data-offset-key="1992-0">, a modern, customizable front-of-house system that allows restaurants to manage their wait list, reservation system, and loyalty programs from one central hub.</span></span></p><p data-key="1995"><span data-key="1994"><span data-offset-key="1994-0"></span></span></p><p data-key="2000"><span data-key="1996"><span data-offset-key="1996-0">Before they made the switch to </span></span><a data-key="1998" href="http://hostmeapp.com/"><span data-key="1997"><span data-offset-key="1997-0">Hostme</span></span></a><span data-key="1999"><span data-offset-key="1999-0">, Leopold's Kafe &amp; Konditorei's staff was left to manage large crowds that were effectively tethered to the entrance of the restaurant. This proved awkward for patrons who were already seated, and frustrating for those who had nothing to do but wait. Chantelle Malcher, manager of Leopold's Kafe, says that the complete Hostme system helped her staff better handle the popular restaurant's rapidly growing customer base.</span></span></p><p data-key="2002"><span data-key="2001"><span data-offset-key="2001-0"></span></span></p><p data-key="2007"><span data-key="2003"><span data-offset-key="2003-0">"The pressure was high, and people got impatient," she said last month. "After switching to </span></span><a data-key="2005" href="http://hostmeapp.com/"><span data-key="2004"><span data-offset-key="2004-0">Hostme</span></span></a><span data-key="2006"><span data-offset-key="2006-0">, we still maintain a long wait list, but our customers aren't forced to stand around and wait for their table. They can explore Georgetown, and come back when they get the notification that their table is ready. The app is easy to use for both my staff and our patrons, making it easier for us to turn tables and reduce wait time."</span></span></p><p data-key="2009"><span data-key="2008"><span data-offset-key="2008-0"></span></span></p><p data-key="2011"><span data-key="2010"><span data-offset-key="2010-0">With the touch of a button, Chantelle and her team are able to communicate with their guests every step of the way via text message or mobile app notifications, eliminating the need for both out of date pagers and awkward searches for the next party to be seated.</span></span></p><p data-key="2013"><span data-key="2012"><span data-offset-key="2012-0"></span></span></p><p data-key="2018"><span data-key="2014"><span data-offset-key="2014-0">"We're excited to truly bring restaurant management into the digital era," said </span></span><a data-key="2016" href="http://hostmeapp.com/"><span data-key="2015"><span data-offset-key="2015-0">Hostme, LLC</span></span></a><span data-key="2017"><span data-offset-key="2017-0"> co-founder Evgeny Popov. "Where other vendors have stopped short of full integration, the Hostme system offers restaurateurs the opportunity to improve front-of-house operations by transitioning the business away from cumbersome pager systems and toward a tablet- and app-based experience."</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
@@ -234,10 +268,10 @@
     <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
         <!-- ko foreach: { data: rows, as: 'row' } -->
         <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
-    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 align-items-xs-center justify-content-xs-center align-items-sm-center justify-content-sm-center align-items-md-center justify-content-md-center align-items-xl-center justify-content-xl-center align-items-lg-center justify-content-lg-center">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h2 data-key="1798" class="text-center"><span data-key="1797"><span data-offset-key="1797-0"><span style="color: #ffffff;">Get it now!</span></span></span></h2><p data-key="1800" class="text-center"><span data-key="1799"><span data-offset-key="1799-0"><span style="color: #ffffff;">No setup fees. No cover fees. No contract.</span></span></span></p><p data-key="1802" class="text-center"><span data-key="1801"><span data-offset-key="1801-0"><span style="color: #ffffff;">What are you waiting for?</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h2 data-key="1798"><span data-key="1797"><span data-offset-key="1797-0">Get it now!</span></span></h2><p data-key="1800"><span data-key="1799"><span data-offset-key="1799-0">No setup fees. No cover fees. No contract.</span></span></p><p data-key="1802"><span data-key="1801"><span data-offset-key="1801-0">What are you waiting for?</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
@@ -266,40 +300,40 @@
     <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
         <!-- ko foreach: { data: rows, as: 'row' } -->
         <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
-    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-3 align-items-xs-start justify-content-xs-start align-items-sm-start justify-content-sm-start align-items-md-start justify-content-md-start align-items-xl-start justify-content-xl-start align-items-lg-start justify-content-lg-start">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1823" class="text-left"><span data-key="1822"><span data-offset-key="1822-0"><span style="color: #ffffff;">Quick links</span></span></span></p><p data-key="1825" class="text-left"><span data-key="1824"><span data-offset-key="1824-0"><span style="color: #f8f8f8;">Home</span></span></span></p><p data-key="1827" class="text-left"><span data-key="1826"><span data-offset-key="1826-0"><span style="color: #f8f8f8;">Reservations</span></span></span></p><p data-key="1829" class="text-left"><span data-key="1828"><span data-offset-key="1828-0"><span style="color: #f8f8f8;">Loyalty</span></span></span></p><p data-key="1831" class="text-left"><span data-key="1830"><span data-offset-key="1830-0"><span style="color: #f8f8f8;">About</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1823"><span data-key="1822"><span data-offset-key="1822-0">Quick links</span></span></p><p data-key="1825"><span data-key="1824"><span data-offset-key="1824-0">Home</span></span></p><p data-key="1827"><span data-key="1826"><span data-offset-key="1826-0">Reservations</span></span></p><p data-key="1829"><span data-key="1828"><span data-offset-key="1828-0">Loyalty</span></span></p><p data-key="1831"><span data-key="1830"><span data-offset-key="1830-0">About</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
     <!-- ko if: widgets().length === 0 --><!-- /ko -->
-</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 align-items-xs-start justify-content-xs-start align-items-sm-start justify-content-sm-start align-items-md-start justify-content-md-start align-items-xl-start justify-content-xl-start align-items-lg-start justify-content-lg-start">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1852" class="text-left"><span data-key="1851"><span data-offset-key="1851-0"><span style="color: #ffffff;">Mobile apps</span></span></span></p><p data-key="1854" class="text-left"><span data-key="1853"><span data-offset-key="1853-0"><span style="color: #f8f8f8;">App store</span></span></span></p><p data-key="1856" class="text-left"><span data-key="1855"><span data-offset-key="1855-0"><span style="color: #f8f8f8;">Google play</span></span></span></p><p data-key="1858" class="text-left"><span data-key="1857"><span data-offset-key="1857-0"><span style="color: #f8f8f8;">Windows Store</span></span></span></p><p data-key="1860" class="text-left"><span data-key="1859"><span data-offset-key="1859-0"><span style="color: #f8f8f8;">HTML Application</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1852"><span data-key="1851"><span data-offset-key="1851-0">Mobile apps</span></span></p><p data-key="1854"><span data-key="1853"><span data-offset-key="1853-0">App store</span></span></p><p data-key="1856"><span data-key="1855"><span data-offset-key="1855-0">Google play</span></span></p><p data-key="1858"><span data-key="1857"><span data-offset-key="1857-0">Windows Store</span></span></p><p data-key="1860"><span data-key="1859"><span data-offset-key="1859-0">HTML Application</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
     <!-- ko if: widgets().length === 0 --><!-- /ko -->
-</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 align-items-xs-start justify-content-xs-start align-items-sm-start justify-content-sm-start align-items-md-start justify-content-md-start align-items-xl-start justify-content-xl-start align-items-lg-start justify-content-lg-start">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1881" class="text-left"><span data-key="1880"><span data-offset-key="1880-0"><span style="color: #ffffff;">Legal</span></span></span></p><p data-key="1883" class="text-left"><span data-key="1882"><span data-offset-key="1882-0"><span style="color: #f8f8f8;">Pricing</span></span></span></p><p data-key="1885" class="text-left"><span data-key="1884"><span data-offset-key="1884-0"><span style="color: #f8f8f8;">Privacy</span></span></span></p><p data-key="1887" class="text-left"><span data-key="1886"><span data-offset-key="1886-0"><span style="color: #f8f8f8;">Terms of use</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1881"><span data-key="1880"><span data-offset-key="1880-0">Legal</span></span></p><p data-key="1883"><span data-key="1882"><span data-offset-key="1882-0">Pricing</span></span></p><p data-key="1885"><span data-key="1884"><span data-offset-key="1884-0">Privacy</span></span></p><p data-key="1887"><span data-key="1886"><span data-offset-key="1886-0">Terms of use</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
     <!-- ko if: widgets().length === 0 --><!-- /ko -->
-</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 align-items-xs-start justify-content-xs-start align-items-sm-start justify-content-sm-start align-items-md-start justify-content-md-start align-items-xl-start justify-content-xl-start align-items-lg-start justify-content-lg-start">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1908" class="text-left"><span data-key="1907"><span data-offset-key="1907-0"><span style="color: #ffffff;">Social</span></span></span></p><p data-key="1910" class="text-left"><span data-key="1909"><span data-offset-key="1909-0"><span style="color: #f8f8f8;">Facebook</span></span></span></p><p data-key="1912" class="text-left"><span data-key="1911"><span data-offset-key="1911-0"><span style="color: #f8f8f8;">Twitter</span></span></span></p><p data-key="1914" class="text-left"><span data-key="1913"><span data-offset-key="1913-0"><span style="color: #f8f8f8;">LinkedIn</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1908"><span data-key="1907"><span data-offset-key="1907-0">Social</span></span></p><p data-key="1910"><span data-key="1909"><span data-offset-key="1909-0">Facebook</span></span></p><p data-key="1912"><span data-key="1911"><span data-offset-key="1911-0">Twitter</span></span></p><p data-key="1914"><span data-key="1913"><span data-offset-key="1913-0">LinkedIn</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
@@ -313,10 +347,10 @@
 <!-- /ko -->
         
         <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
-    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 align-items-xs-center justify-content-xs-center align-items-sm-center justify-content-sm-center align-items-md-center justify-content-md-center align-items-xl-center justify-content-xl-center align-items-lg-center justify-content-lg-center">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1935" class="text-center"><span data-key="1934"><span data-offset-key="1934-0"><span style="color: #eef1f2;">© 2017 Hostme LLC. All Rights Reserved.</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="1935"><span data-key="1934"><span data-offset-key="1934-0">© 2017 Hostme LLC. All Rights Reserved.</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->

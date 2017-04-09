@@ -34,7 +34,8 @@
     <link rel="stylesheet" href="/css/slick.css">
 
     <!-- BOOTSTRAP CSS  -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
     <!-- ON SCROLL ANIMATION CSS  -->
     <link rel="stylesheet" href="/css/animate.min.css">
@@ -71,7 +72,7 @@
     <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
         <!-- ko foreach: { data: rows, as: 'row' } -->
         <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
-    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-3 middle-sm start-sm middle-md start-md middle-lg start-lg">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-3 align-items-xs-center justify-content-xs-start align-items-sm-center justify-content-sm-start align-items-md-center justify-content-md-start align-items-xl-center justify-content-xl-start align-items-lg-center justify-content-lg-start">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
     <!-- ko widgetH: widget --><div class="picture noframe" data-bind="css: css, widget: {}">
@@ -87,76 +88,109 @@
     <!-- /ko -->
 
     <!-- ko if: widgets().length === 0 --><!-- /ko -->
-</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-9 middle-sm end-sm middle-md end-md middle-lg end-lg">
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-9 align-items-xs-center justify-content-xs-end align-items-sm-center justify-content-sm-end align-items-md-center justify-content-md-end align-items-xl-center justify-content-xl-end align-items-lg-center justify-content-lg-end">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><nav class="navbar navbar-default navbar-collapse" data-bind="with: root(), widget: {}">
-    <ul class="nav navbar-nav navbar-right" data-bind="foreach: nodes(), css: { 'navbar-right': $component.alignRight }">
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/">Home</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive" class="active">
-            <a data-bind="text: label, attr: { href: url }" href="/pricing">Pricing</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/about">About</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/blog">Blog</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="/news">News</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="https://help.hostmeapp.com">Help</a>
-        </li>
-        <!--/ko-->
-    
-        <!--ko if: nodes().length > 0 --><!--/ko-->
-        <!--ko ifnot: nodes().length > 0 -->
-        <li data-bind="css: {active: isActive()}, click: $parent.setActive">
-            <a data-bind="text: label, attr: { href: url }" href="https://panel.hostmeapp.com">Sign In</a>
-        </li>
-        <!--/ko-->
+    <!-- ko widgetH: widget --><!--<nav class="navbar navbar-toggleable navbar-light">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
     </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>-->
+
+
+
+<nav class="navbar navbar-toggleable navbar-light" data-bind="with: root(), widget: {}">
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav" data-bind="foreach: nodes()">
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="/">Home</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item active" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="/pricing">Pricing</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="/about">About</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="/blog">Blog</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="/news">News</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="https://help.hostmeapp.com">Help</a>
+            </li>
+            <!--/ko-->
+        
+            <!--ko if: nodes().length > 0 --><!--/ko-->
+            <!--ko ifnot: nodes().length > 0 -->
+            <li class="nav-item" data-bind="css: {active: isActive()}, click: $parent.setActive">
+                <a class="nav-link" data-bind="text: label, attr: { href: url }" href="https://panel.hostmeapp.com">Sign In</a>
+            </li>
+            <!--/ko-->
+        </ul>
+    </div>
 </nav>
 
 <script id="navigationItemTemplate" type="text/html">
     <ul class="dropdown-menu" data-bind="foreach: nodes()">
         <!--ko if: nodes().length > 0 -->
         <li class="dropdown dropdown-submenu">
-            <a class="dropdown-toggle" data-toggle="dropdown" data-bind="attr: { href: url }">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-bind="attr: { href: url }">
                 <span data-bind="text: label"></span>
                 <!--<span class="caret"></span>-->
             </a>
-            <!--ko template: { name: 'ttt', data: $data }--><!--/ko-->
+            <!--ko template: { name: 'ttt', data: $data }-->
+            <!--/ko-->
         </li>
         <!--/ko-->
         <!--ko ifnot: nodes().length > 0 -->
         <li>
-            <a data-bind="text: label, attr: { href: url }"></a>
+            <a class="nav-link" data-bind="text: label, attr: { href: url }"></a>
         </li>
         <!--/ko-->
     </ul>
@@ -183,10 +217,10 @@
     <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
         <!-- ko foreach: { data: rows, as: 'row' } -->
         <!-- ko widgetH: row --><div class="row center-md" data-bind="css: css, layoutrow: {}">
-    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 align-items-xs-center justify-content-xs-center align-items-sm-center justify-content-sm-center align-items-md-center justify-content-md-center align-items-xl-center justify-content-xl-center align-items-lg-center justify-content-lg-center">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h1 data-key="475" class="text-center"><span data-key="474"><span data-offset-key="474-0">Affordable Packages</span></span></h1><p data-key="477" class="text-center"><span data-key="476"><span data-offset-key="476-0">Get started with a FREE plan and upgrade anytime</span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h1 data-key="475"><span data-key="474"><span data-offset-key="474-0">Affordable Packages</span></span></h1><p data-key="477"><span data-key="476"><span data-offset-key="476-0">Get started with a FREE plan and upgrade anytime</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
@@ -210,10 +244,10 @@
     <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
         <!-- ko foreach: { data: rows, as: 'row' } -->
         <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
-    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 align-items-xs-center justify-content-xs-center align-items-sm-center justify-content-sm-center align-items-md-center justify-content-md-center align-items-xl-center justify-content-xl-center align-items-lg-center justify-content-lg-center">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h2 data-key="317" class="text-center"><span data-key="316"><span data-offset-key="316-0"><span style="color: #ffffff;">Get it now!</span></span></span></h2><p data-key="319" class="text-center"><span data-key="318"><span data-offset-key="318-0"><span style="color: #ffffff;">No setup fees. No cover fees. No contract.</span></span></span></p><p data-key="321" class="text-center"><span data-key="320"><span data-offset-key="320-0"><span style="color: #ffffff;">What are you waiting for?</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><h2 data-key="317"><span data-key="316"><span data-offset-key="316-0">Get it now!</span></span></h2><p data-key="319"><span data-key="318"><span data-offset-key="318-0">No setup fees. No cover fees. No contract.</span></span></p><p data-key="321"><span data-key="320"><span data-offset-key="320-0">What are you waiting for?</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     
@@ -242,40 +276,40 @@
     <div data-bind="css: { container: $component.layout() == 'container' }" class="container">
         <!-- ko foreach: { data: rows, as: 'row' } -->
         <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
-    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-3 align-items-xs-start justify-content-xs-start align-items-sm-start justify-content-sm-start align-items-md-start justify-content-md-start align-items-xl-start justify-content-xl-start align-items-lg-start justify-content-lg-start">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="342" class="text-left"><span data-key="341"><span data-offset-key="341-0"><span style="color: #ffffff;">Quick links</span></span></span></p><p data-key="344" class="text-left"><span data-key="343"><span data-offset-key="343-0"><span style="color: #f8f8f8;">Home</span></span></span></p><p data-key="346" class="text-left"><span data-key="345"><span data-offset-key="345-0"><span style="color: #f8f8f8;">Reservations</span></span></span></p><p data-key="348" class="text-left"><span data-key="347"><span data-offset-key="347-0"><span style="color: #f8f8f8;">Loyalty</span></span></span></p><p data-key="350" class="text-left"><span data-key="349"><span data-offset-key="349-0"><span style="color: #f8f8f8;">About</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="342"><span data-key="341"><span data-offset-key="341-0">Quick links</span></span></p><p data-key="344"><span data-key="343"><span data-offset-key="343-0">Home</span></span></p><p data-key="346"><span data-key="345"><span data-offset-key="345-0">Reservations</span></span></p><p data-key="348"><span data-key="347"><span data-offset-key="347-0">Loyalty</span></span></p><p data-key="350"><span data-key="349"><span data-offset-key="349-0">About</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
     <!-- ko if: widgets().length === 0 --><!-- /ko -->
-</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 align-items-xs-start justify-content-xs-start align-items-sm-start justify-content-sm-start align-items-md-start justify-content-md-start align-items-xl-start justify-content-xl-start align-items-lg-start justify-content-lg-start">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="371" class="text-left"><span data-key="370"><span data-offset-key="370-0"><span style="color: #ffffff;">Mobile apps</span></span></span></p><p data-key="373" class="text-left"><span data-key="372"><span data-offset-key="372-0"><span style="color: #f8f8f8;">App store</span></span></span></p><p data-key="375" class="text-left"><span data-key="374"><span data-offset-key="374-0"><span style="color: #f8f8f8;">Google play</span></span></span></p><p data-key="377" class="text-left"><span data-key="376"><span data-offset-key="376-0"><span style="color: #f8f8f8;">Windows Store</span></span></span></p><p data-key="379" class="text-left"><span data-key="378"><span data-offset-key="378-0"><span style="color: #f8f8f8;">HTML Application</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="371"><span data-key="370"><span data-offset-key="370-0">Mobile apps</span></span></p><p data-key="373"><span data-key="372"><span data-offset-key="372-0">App store</span></span></p><p data-key="375"><span data-key="374"><span data-offset-key="374-0">Google play</span></span></p><p data-key="377"><span data-key="376"><span data-offset-key="376-0">Windows Store</span></span></p><p data-key="379"><span data-key="378"><span data-offset-key="378-0">HTML Application</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
     <!-- ko if: widgets().length === 0 --><!-- /ko -->
-</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 align-items-xs-start justify-content-xs-start align-items-sm-start justify-content-sm-start align-items-md-start justify-content-md-start align-items-xl-start justify-content-xl-start align-items-lg-start justify-content-lg-start">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="400" class="text-left"><span data-key="399"><span data-offset-key="399-0"><span style="color: #ffffff;">Legal</span></span></span></p><p data-key="402" class="text-left"><span data-key="401"><span data-offset-key="401-0"><span style="color: #f8f8f8;">Pricing</span></span></span></p><p data-key="404" class="text-left"><span data-key="403"><span data-offset-key="403-0"><span style="color: #f8f8f8;">Privacy</span></span></span></p><p data-key="406" class="text-left"><span data-key="405"><span data-offset-key="405-0"><span style="color: #f8f8f8;">Terms of use</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="400"><span data-key="399"><span data-offset-key="399-0">Legal</span></span></p><p data-key="402"><span data-key="401"><span data-offset-key="401-0">Pricing</span></span></p><p data-key="404"><span data-key="403"><span data-offset-key="403-0">Privacy</span></span></p><p data-key="406"><span data-key="405"><span data-offset-key="405-0">Terms of use</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
 
     <!-- ko if: widgets().length === 0 --><!-- /ko -->
-</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 top-sm start-sm top-md start-md top-lg start-lg">
+</div><!-- /ko --><!-- ko widgetH: column --><div class="col-md-3 align-items-xs-start justify-content-xs-start align-items-sm-start justify-content-sm-start align-items-md-start justify-content-md-start align-items-xl-start justify-content-xl-start align-items-lg-start justify-content-lg-start">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="427" class="text-left"><span data-key="426"><span data-offset-key="426-0"><span style="color: #ffffff;">Social</span></span></span></p><p data-key="429" class="text-left"><span data-key="428"><span data-offset-key="428-0"><span style="color: #f8f8f8;">Facebook</span></span></span></p><p data-key="431" class="text-left"><span data-key="430"><span data-offset-key="430-0"><span style="color: #f8f8f8;">Twitter</span></span></span></p><p data-key="433" class="text-left"><span data-key="432"><span data-offset-key="432-0"><span style="color: #f8f8f8;">LinkedIn</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="427"><span data-key="426"><span data-offset-key="426-0">Social</span></span></p><p data-key="429"><span data-key="428"><span data-offset-key="428-0">Facebook</span></span></p><p data-key="431"><span data-key="430"><span data-offset-key="430-0">Twitter</span></span></p><p data-key="433"><span data-key="432"><span data-offset-key="432-0">LinkedIn</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
@@ -289,10 +323,10 @@
 <!-- /ko -->
         
         <!-- ko widgetH: row --><div class="row" data-bind="css: css, layoutrow: {}">
-    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 middle-sm center-sm middle-md center-md middle-lg center-lg">
+    <!-- ko foreach: { data: columns, as: 'column'  } --><!-- ko widgetH: column --><div class="col-md-12 align-items-xs-center justify-content-xs-center align-items-sm-center justify-content-sm-center align-items-md-center justify-content-md-center align-items-xl-center justify-content-xl-center align-items-lg-center justify-content-lg-center">
     <!-- ko if: widgets().length > 0 -->
     <!-- ko foreach: { data: widgets, as: 'widget'  } -->
-    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="454" class="text-center"><span data-key="453"><span data-offset-key="453-0"><span style="color: #eef1f2;">© 2017 Hostme LLC. All Rights Reserved.</span></span></span></p></div></div></div></div>
+    <!-- ko widgetH: widget --><div class="expand" data-bind="slate: { htmlEditor: htmlEditor, state: state }, widget: {}"><div data-reactroot=""><div class="editor"><div data-slate-editor="true" contenteditable="false" autocorrect="true" spellcheck="true" style="outline: none; white-space: pre-wrap;"><p data-key="454"><span data-key="453"><span data-offset-key="453-0">© 2017 Hostme LLC. All Rights Reserved.</span></span></p></div></div></div></div>
 
 <!--<p>THIS IS TEXT BLOCK</p>--><!-- /ko -->
     <!-- /ko -->
